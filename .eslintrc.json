@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "react-app"
+  ],
+  "globals": {
+    "apiUri": "readonly"
+  },
+  "rules": {
+    "max-len": ["error", { "code": 120 }],
+    "quotes": ["error", "single"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "comma-dangle": ["error", "always-multiline"],
+    "semi": ["error", "always"],
+    "block-spacing": ["error", "always"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "object-curly-spacing": ["error", "always"],
+    "no-multi-spaces": ["error", { "ignoreEOLComments": false }],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0, "maxBOF": 0 }],
+    "react-hooks/exhaustive-deps": "off"
+  }
+}

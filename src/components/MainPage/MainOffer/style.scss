@@ -1,0 +1,15 @@
+.main-offer-wrapper {
+  position: relative;
+
+  .vector-wrapper {
+    position: absolute;
+    top: 117px;
+    left: 44px;
+
+    .offer-wrapper {
+      position: absolute;
+      top: 35px;
+      left: 105px;
+    }
+  }
+}

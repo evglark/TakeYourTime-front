@@ -1,0 +1,30 @@
+header {
+  height: 85px;
+  padding: 8px 0;
+
+  .logo-wrapper {
+    .logo-title-wrapper {
+      text-align: center;
+      color:#13277E;
+      font-family: Rubik;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  .navigation-wrapper {
+    color: #13277E;
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .sub-menu-wrapper {
+    color: #13277E;
+    font-family: Rubik;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+}
