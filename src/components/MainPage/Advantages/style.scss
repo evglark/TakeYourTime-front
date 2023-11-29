@@ -1,0 +1,21 @@
+.advantages-component {
+  padding: 100px 104px 120px 104px;
+  background: #C6D3FF;
+  font-family: Rubik;
+
+  .advantage-title {
+    color: #13277E;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -0.41px;
+  }
+
+  .advantage-text {
+    color: var(--text-primary, #232323);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.41px;
+  }
+}

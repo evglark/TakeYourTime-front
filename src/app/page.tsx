@@ -5,7 +5,6 @@ import {
   MainOffer,
   Advantages,
   Costs,
-  Cleaning,
   PriceByPhoto,
   Promotions,
   FAQ,
@@ -19,7 +18,6 @@ const MainPage = () => {
       <MainOffer />
       <Advantages />
       <Costs />
-      <Cleaning />
       <PriceByPhoto />
       <Promotions />
       <FAQ />
