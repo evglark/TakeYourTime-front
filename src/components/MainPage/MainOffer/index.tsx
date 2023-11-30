@@ -25,7 +25,7 @@ export const MainOffer = () => {
           <div className="title main-title">needs</div>
           <div className="_mt-5 _flex _gap-5">
           {advantages.map(el => (
-            <div className='advantages-block _flex _gap-3'>
+            <div className='advantages-block _flex _gap-3' key={el.title}>
               <Image src={checkSvg} alt="" />
               <div>
                 <div className="advantages-title">{el.title}</div>

@@ -16,6 +16,7 @@ export const Costs = () => {
           <div
             className="costs-switcher-title _cursor-pointer"
             onClick={() => setTab(el as string)}
+            key={el}
           >
             <div className={el === tab ? 'active' : ''}>
               {el}
@@ -32,6 +33,7 @@ export const Costs = () => {
           <div
             className={`room-item ${el === room && 'active'}`}
             onClick={() => setRoom(el as string)}
+            key={el}
           >
             {el}
           </div>

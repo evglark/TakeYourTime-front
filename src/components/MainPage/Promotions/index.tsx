@@ -18,7 +18,7 @@ export const Promotions = () => {
       <div className="title">Promotions and discounts</div>
       <div className="promotions-block _flex _justify-around">
         {promotions.map((el) => (
-          <div className="promotion-card">
+          <div className="promotion-card" key={el.text}>
             <div className="_flex _justify-center">
               <Image width={128} height={128} src={el.img} alt='' />
             </div>

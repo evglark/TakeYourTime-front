@@ -19,7 +19,7 @@ export const Advantages = () => {
     <div className="advantages-component _flex _justify-center">
       <div className="_flex _gap-7">
         {advantages.map(el => (
-          <div className="_flex _flex-col">
+          <div className="_flex _flex-col" key={el.title}>
             <div className="_flex _justify-center _basis-1/4">
               <Img src={el.icon} alt=''/>
             </div>

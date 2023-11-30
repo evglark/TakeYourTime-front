@@ -1,5 +1,7 @@
 "use client";
-import React from 'react';
+import React, { FC } from 'react';
+
+import { i18n } from './locales';
 
 import {
   MainOffer,
@@ -12,7 +14,17 @@ import {
   Order,
 } from '@/components/MainPage';
 
-const MainPage = () => {
+async function getServerSideProps() {
+  const response = await fetch('http://localhost:5001/api/locals');
+  const data = await response.json();
+  return data.locales;
+}
+
+export default async function MainPage() {
+  const locales = await getServerSideProps();
+  const { t } = i18n('ru', locales);
+  console.log(t('Hello'));
+
   return (
     <div className="main-page">
       <MainOffer />
@@ -26,5 +38,3 @@ const MainPage = () => {
     </div>
   );
 };
-
-export default MainPage;
