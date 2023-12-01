@@ -21,9 +21,9 @@ async function getServerSideProps() {
 }
 
 export default async function MainPage() {
-  const locales = await getServerSideProps();
-  const { t } = i18n('ru', locales);
-  console.log(t('Hello'));
+  // const locales = await getServerSideProps();
+  // const { t } = i18n('ru', locales);
+  // console.log(t('Hello'));
 
   return (
     <div className="main-page">

@@ -1,5 +1,4 @@
 .promotions-component {
-  padding: 0 104px;
   background: #C6D3FF;
   font-family: Rubik;
 
@@ -15,6 +14,7 @@
   }
 
   .promotions-block {
+    margin: 0 104px;
     padding: 30px 0;
     border-radius: 24px;
     background: #ECF0FF;
@@ -27,5 +27,72 @@
         text-align: center;
       }
     }
+  }
+
+  .discounts-wrapper {
+    margin: 24px 52px;
+    padding: 0 -104px;
+
+    .discounts-card-wrapper {
+      height: 283px;
+      width: 230px;
+      padding: 30px 0;
+      border-radius: 24px;
+      background: #ECF0FF;
+      color: #232323;
+
+      .title-wrapper {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 31.2px;
+        align-items: center;
+
+        .sale-wrapper {
+          margin-left: 12px;
+          padding: 8px;
+          border-radius: 72px;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 22px;
+          letter-spacing: -0.41px;
+          align-items: center;
+        }
+      }
+
+      .services-wrapper{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.41px;
+      }
+
+      .order-button-wrapper {
+        width: 197px;
+        height: 53px;
+        border-radius: 40px;
+        background: #2B8AFC;
+        cursor: pointer;
+
+        color: #F9F9F9;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20.8px;
+        letter-spacing: -0.41px;
+      }
+    }
+  }
+
+  .slider-status {
+    width: 50px;
+    height: 10px;
+    border-radius: 100px;
+    background: #2B8AFC;
+  }
+
+  .slider-status.sub {
+    width: 10px;
+    height: 10px;
+    background: #ECF0FF;
   }
 }

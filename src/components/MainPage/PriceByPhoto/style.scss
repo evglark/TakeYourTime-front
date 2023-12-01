@@ -29,6 +29,21 @@
       white-space: pre-line;
     }
 
+    .img-wrapper {
+      position: relative;
+      margin: 32px 0 40px 0;
+      height: 519px;
+
+      img {
+        position: absolute;
+      }
+
+      img:first-child {
+        top: 40px;
+        left: 81px;
+      }
+    }
+
     .social-button {
       padding: 12px 30px 12px 31px;
       border-radius: 40px;

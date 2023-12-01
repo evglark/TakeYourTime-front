@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import logo from './logo.png'
+import { LogoIcon } from './Logo';
 import './style.scss';
 
 export const Header = () => {
@@ -19,13 +19,10 @@ export const Header = () => {
   return (
     <header>
       <nav className="container _flex">
-        <div className="logo-wrapper _mr-5 _flex _flex-col">
+        <div className="logo-wrapper">
           <Link className="navbar-brand" href={'/'}>
-            <div className="_flex _justify-center">
-              <Image width={50} height={50} src={logo} alt="" />
-            </div>
-            <div className="logo-title-wrapper">
-              Washee
+            <div>
+              <LogoIcon />
             </div>
           </Link>
         </div>
