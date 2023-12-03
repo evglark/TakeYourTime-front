@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 
+import { MessengerIcon } from '@/components/common/icons/Messenger';
+import { TelegramIcon } from '@/components/common/icons//Telegram';
+import { WhatsappIcon } from '@/components/common/icons/Whatsapp';
 import bubblesIcon from './icons/bubbles.svg';
 import iphoneIcon from './icons/iphone.svg';
-import messenger from './icons/messenger.svg';
-import telegram from './icons/telegram.svg';
-import whatsapp from './icons/whatsapp.svg';
 import './style.scss';
 
 export const PriceByPhoto = () => {
@@ -26,21 +26,15 @@ export const PriceByPhoto = () => {
         </div>
         <div className="_flex _justify-center _gap-6">
           <div className="social-button _flex _justify-center _gap-2 _cursor-pointer">
-            <div>
-              <Image width={24} height={24} src={telegram} alt='' />
-            </div>
+            <TelegramIcon />
             <div>Telegram</div>
           </div>
           <div className="social-button _flex _justify-center _gap-2 _cursor-pointer">
-            <div>
-              <Image width={24} height={24} src={whatsapp} alt='' />
-            </div>
+            <WhatsappIcon />
             <div>Whatsapp</div>
           </div>
           <div className="social-button _flex _justify-center _gap-2 _cursor-pointer">
-            <div>
-              <Image width={24} height={24} src={messenger} alt='' />
-            </div>
+            <MessengerIcon />
             <div>Messenger</div>
           </div>
         </div>

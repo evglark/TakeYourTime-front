@@ -1,6 +1,6 @@
 .costs-component {
   background: #C6D3FF;
-  padding: 0 104px;
+  padding: 0 104px 120px 104px;
 
   .main-title {
     margin-bottom: 20px;
@@ -11,22 +11,109 @@
     letter-spacing: -0.41px;
   }
 
-  .room-item {
-    padding-top: 24px;
-    width: 205px;
-    height: 69px;
-    color: #232323;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20.8px;
-    letter-spacing: -0.41px;
-    cursor: pointer;
+  .no-sales-wrapper {
+    min-width: 211px;
+    margin: 28px 22px 28px 31px;
+
+    .title {
+      margin: 4px 0;
+    }
   }
 
-  .room-item.active {
-    color: #F9F9F9;
-    background: #2B8AFC;
-    border-radius: 64px;
+  .costs-sales-wrapper {
+    margin-top: 32px;
+    width: 100%;
+    border-radius: 24px;
+    background: #ECF0FF;
+
+    .sales-list {
+      margin: 28px 20px 28px 28px;
+
+      .sale-item {
+        padding: 14px 27px;
+        width: 250px;
+
+        .title {
+          margin-top: 8px;
+          color: #232323;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 22px;
+          letter-spacing: -0.41px;
+        }
+  
+        .sale {
+          padding: 8px;
+          align-items: center;
+          border-radius: 72px;
+          background: #F9C630;
+          color: #232323;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 22px;
+          letter-spacing: -0.41px;
+        }
+      }
+
+      .sale-item.active {
+        border-radius: 88px;
+        background: #2B8AFC;
+        color: #F9F9F9;
+      }
+    }
+
+    .costs-wrapper {
+      .costs-item {
+        text-align: center;
+        margin: 28px 20px;
+
+        .title {
+          color: #232323;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 22px;
+          letter-spacing: -0.41px;
+        }
+  
+        .text {
+          height: 72px;
+          margin: 16px 0 24px 0;
+          color: #5C5C5C;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: -0.41px;
+        }
+  
+        .coast {
+          color: #232323;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32px;
+          letter-spacing: -0.38px;
+        }
+  
+        .old-coast {
+          margin-left: 8px;
+          color: #5C5C5C;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 21px;
+          text-decoration-line: line-through;
+        }
+  
+        .button {
+          margin-top: 24px;
+          padding: 18px 120px;
+          border-radius: 40px;
+          background: var(--Primary, #2B8AFC);
+          color: var(--backround-primary, #F9F9F9);
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 20px;
+          letter-spacing: -0.41px;
+        }
+      }
+    }
   }
 }

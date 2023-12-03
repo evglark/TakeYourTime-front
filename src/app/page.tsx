@@ -5,6 +5,7 @@ import { i18n } from './locales';
 
 import {
   MainOffer,
+  AdditionalServices,
   Advantages,
   Cleaning,
   Costs,
@@ -33,6 +34,7 @@ export default async function MainPage() {
       <Costs />
       <Cleaning />
       <PriceByPhoto />
+      <AdditionalServices />
       <Promotions />
       <FAQ />
       <Reviews />
