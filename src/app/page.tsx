@@ -1,11 +1,12 @@
 "use client";
-import React, { FC } from 'react';
+import React from 'react';
 
 import { i18n } from './locales';
 
 import {
   MainOffer,
   Advantages,
+  Cleaning,
   Costs,
   PriceByPhoto,
   Promotions,
@@ -30,6 +31,7 @@ export default async function MainPage() {
       <MainOffer />
       <Advantages />
       <Costs />
+      <Cleaning />
       <PriceByPhoto />
       <Promotions />
       <FAQ />

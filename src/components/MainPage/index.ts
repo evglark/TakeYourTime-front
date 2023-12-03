@@ -1,4 +1,5 @@
 export { Advantages } from './Advantages';
+export { Cleaning } from './Cleaning';
 export { Costs } from './Costs';
 export { FAQ } from './FAQ';
 export { MainOffer } from './MainOffer';

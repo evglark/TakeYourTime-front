@@ -1,44 +1,20 @@
 import React, { useState } from 'react';
 
+import { Switcher } from '../../common/Switcher';
 import './style.scss';
 
 export const Costs = () => {
-  const tabs = ['Regular', 'Deep'];
-  const [tab, setTab] = useState('Regular');
-  const rooms = ['Bedroom', 'Kitchen', 'Corridor', 'Bathroom', 'Balcony', 'Additional'];
-  const [room, setRoom] = useState('Bedroom');
+  const tabs = ['Subscription', 'One-time'];
+  const [tab, setTab] = useState('Subscription');
 
   return (
     <div className="costs-component _flex _flex-col _items-center">
       <div className="main-title">How much it costs</div>
-      <div className="costs-switcher _flex _justify-around">
-        {tabs.map((el) => (
-          <div
-            className="costs-switcher-title _cursor-pointer"
-            onClick={() => setTab(el as string)}
-            key={el}
-          >
-            <div className={el === tab ? 'active' : ''}>
-              {el}
-            </div>
-          </div>
-        ))}
-        <div className="active-block" style={{ left: tabs.indexOf(tab) * 132 + 'px' }}/>
-      </div>
+      <Switcher tab={tab} tabs={tabs} onClick={(el: string) => setTab(el)} />
       <div style={{ width: '1232px' }}>
         {tab}
       </div>
-      <div className="_flex _justify-around">
-        {rooms.map((el) => (
-          <div
-            className={`room-item ${el === room && 'active'}`}
-            onClick={() => setRoom(el as string)}
-            key={el}
-          >
-            {el}
-          </div>
-        ))}
-      </div>
+      123
     </div>
   )
 };

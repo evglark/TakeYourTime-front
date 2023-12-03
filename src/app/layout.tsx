@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Rubik } from 'next/font/google'
 
 import { Providers } from '@/components/Providers';
 import { Header } from '@/components/Header';
 
 import './globals.css'
 
-const inter = Roboto({
-  subsets: ['latin'],
+const inter = Rubik({
+  subsets: ['latin', 'cyrillic', 'latin-ext'],
   weight: '400',
 })
 
