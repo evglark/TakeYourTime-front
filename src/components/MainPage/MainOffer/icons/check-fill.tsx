@@ -1,3 +1,6 @@
+import React from "react";
+
+export const CheckSvg = () => (
 <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="mingcute:check-fill" clipPath="url(#clip0_1335_7607)">
 <g id="Group">
@@ -10,3 +13,4 @@
 </clipPath>
 </defs>
 </svg>
+);

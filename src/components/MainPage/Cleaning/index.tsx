@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 
 import { Switcher } from '../../common/Switcher';
@@ -26,6 +27,8 @@ const options = [
 ];
 
 const getRoom = (room: string) => {
+  console.log(room);
+
   switch (room) {
     case 'Bedroom':
       return <Bedroom />;
@@ -51,7 +54,7 @@ export const Cleaning = () => {
       <div className="main-title">What cleaning consists of</div>
       <Switcher tab={tab} tabs={tabs} onClick={(el: string) => setTab(el)} />
       <div className={"room-img-wrapper" + " " + room.toLowerCase()}>
-        {getRoom(room)}
+        <Bedroom />
       </div>
       <div className="_flex _justify-around">
         {rooms.map((el) => (

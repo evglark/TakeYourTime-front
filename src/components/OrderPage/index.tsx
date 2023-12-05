@@ -1,9 +1,30 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
+
+import { Switcher } from '@/components/common/Switcher';
+import { Footer } from '@/components/Footer';
+
+import { OrderForm } from './OrderForm';
+import { Summary } from './Summary';
+import './style.scss';
 
 export const OrderPage = () => {
+  const tabs = ['Apartment', 'Private house'];
+  const [tab, setTab] = useState('Apartment');
+
   return (
     <div className="order-page">
-      1
+      <div className="title _flex _justify-center">
+        Regular cleaning
+      </div>
+      <div className="switcher-wrapper _flex _justify-center">
+        <Switcher tab={tab} tabs={tabs} onClick={(el: string) => setTab(el)} />
+      </div>
+      <div className="content-wrapper _flex _justify-center _gap-10">
+        <OrderForm />
+        <Summary />
+      </div>
+      <Footer />
     </div>
   );
 };

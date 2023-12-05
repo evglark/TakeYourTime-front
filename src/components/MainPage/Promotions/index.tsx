@@ -50,9 +50,9 @@ export const Promotions = () => {
           </div>
         ))}
       </div>
-      <div className="discounts-wrapper _flex _gap-2">
+      <div className="discounts-wrapper _flex _justify-center _gap-2">
         <div className="_flex _flex-col _justify-center">
-          <div>
+          <div className="_cursor-pointer">
             {'<'}
           </div>
         </div>
@@ -94,7 +94,7 @@ export const Promotions = () => {
           ))}
         </div>
         <div className="_flex _flex-col _justify-center">
-          <div>
+          <div className="_cursor-pointer">
             {'>'}
           </div>
         </div>

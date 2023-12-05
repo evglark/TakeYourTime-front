@@ -6,8 +6,8 @@ export const MainOfferSVG = () => (
 <rect width="3000" height="2000" fill="url(#pattern0)"/>
 </g>
 <defs>
-<filter id="filter0_i_5455_37175" x="0" y="0" width="3000" height="2000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_i_5455_37175" x="0" y="0" width="3000" height="2000" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="3000"/>
