@@ -3,6 +3,10 @@ import './style.scss';
 
 export const Order = () => {
   return (
-    <div>9</div>
+    <div>
+      <div>Order cleaning today</div>
+      <div>cal</div>
+      <div>Order</div>
+    </div>
   )
 };

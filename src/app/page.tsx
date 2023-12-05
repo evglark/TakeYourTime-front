@@ -3,18 +3,7 @@ import React from 'react';
 
 import { i18n } from './locales';
 
-import {
-  MainOffer,
-  AdditionalServices,
-  Advantages,
-  Cleaning,
-  Costs,
-  PriceByPhoto,
-  Promotions,
-  FAQ,
-  Reviews,
-  Order,
-} from '@/components/MainPage';
+import { MainPage as Page } from '@/components/MainPage';
 
 async function getServerSideProps() {
   const response = await fetch('http://localhost:5001/api/locals');
@@ -27,18 +16,5 @@ export default async function MainPage() {
   // const { t } = i18n('ru', locales);
   // console.log(t('Hello'));
 
-  return (
-    <div className="main-page">
-      <MainOffer />
-      <Advantages />
-      <Costs />
-      <Cleaning />
-      <PriceByPhoto />
-      <AdditionalServices />
-      <Promotions />
-      <FAQ />
-      <Reviews />
-      <Order />
-    </div>
-  );
+  return <Page />;
 };
