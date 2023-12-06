@@ -4,8 +4,10 @@ import React, { useState } from 'react';
 import { Switcher } from '@/components/common/Switcher';
 import { Footer } from '@/components/Footer';
 
+import { DatePicker } from './DatePicker';
 import { OrderForm } from './OrderForm';
 import { Summary } from './Summary';
+import { TimePicker } from './TimePicker';
 import { UserData } from './UserData';
 import './style.scss';
 
@@ -25,8 +27,12 @@ export const OrderPage = () => {
         <div className="_flex _flex-col _gap-20">
           <OrderForm />
           <UserData />
+          <DatePicker />
+          <TimePicker />
         </div>
-        <Summary />
+        <div>
+          <Summary />
+        </div>
       </div>
       <Footer />
     </div>
