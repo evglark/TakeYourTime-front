@@ -1,11 +1,12 @@
 .costs-component {
+  padding: 0 104px;
+
   .main-title {
     margin-bottom: 20px;
     color: #13277E;
     font-size: 40px;
     font-weight: 600;
     line-height: 52px;
-    letter-spacing: -0.41px;
   }
 
   .no-sales-wrapper {
@@ -36,7 +37,6 @@
           font-size: 20px;
           font-weight: 600;
           line-height: 22px;
-          letter-spacing: -0.41px;
         }
   
         .sale {
@@ -48,7 +48,6 @@
           font-size: 20px;
           font-weight: 600;
           line-height: 22px;
-          letter-spacing: -0.41px;
         }
       }
 
@@ -69,7 +68,6 @@
           font-size: 20px;
           font-weight: 600;
           line-height: 22px;
-          letter-spacing: -0.41px;
         }
   
         .text {
@@ -79,7 +77,6 @@
           font-size: 16px;
           font-weight: 400;
           line-height: 24px;
-          letter-spacing: -0.41px;
         }
   
         .coast {
@@ -101,14 +98,13 @@
   
         .button {
           margin-top: 24px;
-          padding: 18px 120px;
+          padding: 18px 0;
           border-radius: 40px;
           background: var(--Primary, #2B8AFC);
           color: var(--backround-primary, #F9F9F9);
           font-size: 16px;
           font-weight: 500;
           line-height: 20px;
-          letter-spacing: -0.41px;
         }
       }
     }

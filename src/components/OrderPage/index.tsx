@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer';
 
 import { OrderForm } from './OrderForm';
 import { Summary } from './Summary';
+import { UserData } from './UserData';
 import './style.scss';
 
 export const OrderPage = () => {
@@ -21,7 +22,10 @@ export const OrderPage = () => {
         <Switcher tab={tab} tabs={tabs} onClick={(el: string) => setTab(el)} />
       </div>
       <div className="content-wrapper _flex _justify-center _gap-10">
-        <OrderForm />
+        <div className="_flex _flex-col _gap-20">
+          <OrderForm />
+          <UserData />
+        </div>
         <Summary />
       </div>
       <Footer />

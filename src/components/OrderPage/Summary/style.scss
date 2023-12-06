@@ -1,6 +1,140 @@
 .summary-wrapper {
-  width: 100%;
+  max-width: 586px;
   padding: 40px;
   border-radius: 24px;
   background: #ECF0FF;
+
+  .summary-title {
+    color: #232323;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+
+  .sec-summary-title-wrapper {
+    margin-top: 8px;
+    border-top: 1px dashed #13277E;
+    padding-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .sub-title-wrapper {
+    color: #232323;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    .span-sub-title {
+      font-weight: 600;
+      line-height: 21px;
+    }
+  }
+
+  .error-wrapper {
+    color: #FF5959;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .checked-wrapper {
+    padding: 16px 0;
+    white-space: pre-line;
+    color: #232323;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .input-promo-code {
+    .input-wrapper {
+      height: 56px;
+      border-radius: 44px;
+      background: #F9F9F9;
+
+      .icon-wrapper {
+        margin: auto 12px auto 20px;
+      }
+
+      .input {
+        width: calc(100% - 133px);
+        background: #F9F9F9;
+        outline: none;
+      }
+
+      .button-wrapper {
+        margin-left: auto;
+        width: 133px;
+        padding-top: 18px;
+        border-radius: 40px;
+        background: #2B8AFC;
+        color: #F9F9F9;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 21px;
+      }
+    }
+  }
+
+  .services-in-summary {
+    margin-top: 8px;
+
+    .service-item {
+      margin-right: 8px;
+      margin-bottom: 8px;
+      float: left;
+      height: 36px;
+      width: max-content;
+      padding: 0 6px 0 12px;
+      border-radius: 45px;
+      border: 1px solid #C8C8C8;
+
+      .icon-wrapper {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .to-pay-wrapper {
+    margin-top: 32px;
+    height: 32px;
+
+    .title {
+      margin-right: 4px;
+      color: #232323;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .current-price {
+      margin-right: 6px;
+      color: #232323;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+    }
+
+    .old-price {
+      color: #848484;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+      text-decoration-line: line-through;
+    }
+  }
+
+  .order-wrapper {
+    margin-top: 32px;
+    height: 56px;
+    padding-top: 18px;
+    border-radius: 40px;
+    background: #2B8AFC;
+    color: #F9F9F9;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+  }
 }

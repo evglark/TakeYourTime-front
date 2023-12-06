@@ -17,17 +17,21 @@ import './style.scss';
 export const MainPage = () => {
   return (
     <div className="main-page">
-      <MainOffer />
-      <Advantages />
-      <Costs />
-      <Cleaning />
-      <PriceByPhoto />
-      <AdditionalServices />
-      <Promotions />
-      <FAQ />
-      <Reviews />
-      <Order />
-      <Footer />
+      <div className="main-content _flex _flex-col">
+        <MainOffer />
+        <Advantages />
+        <Costs />
+        <Cleaning />
+        <PriceByPhoto />
+        <AdditionalServices />
+        <Promotions />
+        <FAQ />
+        <Reviews />
+        <div className="_flex _flex-col">
+          <Order />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 };
