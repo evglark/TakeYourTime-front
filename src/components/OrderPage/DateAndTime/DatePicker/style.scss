@@ -1,0 +1,38 @@
+.date-picker-component {
+  padding: 45px 36px 33px 64px ;
+  border-radius: 24px;
+  background: #ECF0FF;
+
+  .button-date-picker-wrapper {
+    width: 100px;
+    margin-right: 36px;
+
+    .button-date-picker {
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+      background: #F9F9F9;
+      box-shadow: 0px 24px 48px 0px rgba(164, 164, 164, 0.15);
+    }
+  }
+
+  .week-day-cell {
+    margin-bottom: 8px;
+    width: 40px;
+    height: 23px;
+    color: #AAA;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .day-cell {
+    margin-bottom: 12px;
+    width: 40px;
+    height: 40px;
+    color: #232323;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+  }
+}
