@@ -48,7 +48,7 @@ export const AdditionalServices = () => {
 
   return (
     <div className="additional-services">
-      <div className="title">Additional services</div>
+      <div className="title _mb-8">Additional services</div>
       <Slider
         elements={getServicesGroup().map((el => ({
           id: el.id,

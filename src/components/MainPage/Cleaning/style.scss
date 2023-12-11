@@ -11,6 +11,35 @@
 
   .room-img-wrapper {
     margin: 32px 0;
+    position: relative;
+
+    .room-services {
+      position: absolute;
+      padding: 20px;
+      border-radius: 60px;
+      background: rgba(235, 239, 255, 0.65);
+
+      .room-service-title {
+        color: #232323;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 130%;
+      }
+
+      .room-service-point-wrapper {
+        width: 26.25px;
+        height: 26.25px;
+        border-radius: 50%;
+        border: 1px solid #13277E;
+
+        .room-service-point {
+          width: 17.5px;
+          height: 17.5px;
+          border-radius: 21px;
+          background: #13277E;
+        }
+      }
+    }
   }
 
   .room-item {

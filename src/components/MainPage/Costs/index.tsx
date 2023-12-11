@@ -76,7 +76,9 @@ export const Costs = () => {
 
   return (
     <div className="costs-component _flex _flex-col _items-center">
-      <div className="main-title">How much it costs</div>
+      <div className="main-title">
+        <b>How much it costs</b>
+      </div>
       <Switcher tab={tab} tabs={tabs} onClick={(el: string) => setTab(el)} />
       <div className="costs-sales-wrapper _flex _justify-center">
         {tab === 'Subscription' ? (
