@@ -4,43 +4,13 @@ import Image from 'next/image';
 
 import { Switcher } from '../../common/Switcher';
 
-import BalconyPng from './images/Balcony.png';
-import BathroomPng from './images/Bathroom.png';
-import BedroomPng from './images/Bedroom.png';
-import CorridorPng from './images/Corridor.png';
-import KitchenPng from './images/Kitchen.png';
-
+import { tabs, rooms, options } from './constants';
+import { getRoom } from './utils';
 import './style.scss';
 
 export const Cleaning = () => {
-  const tabs = ['Regular', 'Deep'];
-  const rooms = ['Bedroom', 'Kitchen', 'Corridor', 'Bathroom', 'Balcony'];
   const [tab, setTab] = useState(() => tabs[0]);
   const [room, setRoom] = useState(() => rooms[0]);
-
-  const options = [
-    {
-      room: 'Bedroom',
-      options: [
-        { title: 'Wiping down mirrors and frames', position: [883, 112] },
-        { title: 'Removing dust from all accessible lamps', position: [339, 146], revers: true  },
-        { title: 'Arranging household items', position: [714, 329] },
-        { title: 'Dusting all the accessible surfaces', position: [231, 359], revers: true  },
-        { title: 'Taking out garbage', position: [60, 511], revers: true  },
-        { title: 'Making the bed', position: [445, 553] },
-        { title: 'Vacuuming or sweeping \n and mopping floors', position: [108, 740], revers: true  },
-      ]
-    },
-  ];
-
-  const getRoom = (room: string) => {
-    if (room === 'Bedroom') return <Image src={BedroomPng} alt="" />;
-    if (room === 'Kitchen') return <Image src={KitchenPng} alt="" />;
-    if (room === 'Corridor') return <Image src={CorridorPng} alt="" />;
-    if (room === 'Bathroom') return <Image src={BathroomPng} alt="" />;
-    if (room === 'Balcony') return <Image src={BalconyPng} alt="" />;
-    return null;
-  };
 
   return (
     <div className="costs-component _flex _flex-col _items-center">

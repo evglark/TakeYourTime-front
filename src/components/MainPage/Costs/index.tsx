@@ -4,19 +4,13 @@ import { useRouter } from 'next/navigation';
 
 import { Switcher } from '@/components/common/Switcher';
 import { Discount } from './icons/Discount';
+import { tabs, sales } from './constants';
 import './style.scss';
 
 export const Costs = () => {
-  const tabs = ['Subscription', 'One-time'];
-  const [tab, setTab] = useState('Subscription');
-  const [salesCost, setSalesCost] = useState('Once a week');
+  const [tab, setTab] = useState(() => tabs[0]);
+  const [salesCost, setSalesCost] = useState(() => sales[0].title);
   const router = useRouter();
-
-  const sales = [
-    { title: 'Once a week', sale: '-20%' },
-    { title: 'Twice a month', sale: '-15%' },
-    { title: 'Once a month', sale: '-10%'}
-  ];
 
   const getCoast = (title: string) => {
     if (tab === 'One-time') {
