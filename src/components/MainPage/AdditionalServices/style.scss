@@ -6,4 +6,18 @@
     font-weight: 600;
     line-height: 52px;
   }
+
+  .service-wrapper {
+    padding: 30px 74px;
+    border-radius: 20px;
+    background: #EBEFFF;
+
+    .item-title {
+      color: #1E1E1E;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 22px;
+    }
+  }
 }

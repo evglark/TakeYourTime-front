@@ -9,10 +9,11 @@ interface Props {
 		content: () => JSX.Element;
 	}[];
 	step?: number;
+  status?: boolean;
 };
 
 export const Slider: FC<Props> = (props) => {
-	const { elements, step = 4 } = props;
+	const { elements, step = 4, status = true } = props;
 	const [currentSlide, setCurrentSlide] = useState(0);
 
 	const nextSlide = () => {

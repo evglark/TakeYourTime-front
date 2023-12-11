@@ -45,6 +45,7 @@ export const Promotions = () => {
               <DiscountItem discount={{ ...el, key: el.services.join('n' + i) }} />
             )
           }))}
+          status={false}
         />
       </div>
     </div>
