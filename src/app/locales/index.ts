@@ -15,14 +15,14 @@ const getLocales = (locales: ILocales[], lang: string) => {
   }, {} as { [key: string]: string });
 };
 
-export const i18n = (lang = 'en', locales: ILocales[]) => {
-  i18next.init({
-    lng: lang,
-    resources: {
-      en: { translation: {} },
-      ru: { translation: getLocales(locales, 'ru') },
-    }
-  });
+export const initI18n = (locales: ILocales[]) => {
+  const resources = {
+    en: { translation: getLocales(locales, 'en') },
+    ru: { translation: getLocales(locales, 'ru') },
+  }
 
-  return i18next;
+  return (lng: string) => {
+    i18next.init({ lng, resources });
+    return i18next;
+  };
 }

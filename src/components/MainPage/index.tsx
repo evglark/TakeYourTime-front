@@ -14,7 +14,14 @@ import { Promotions } from './Promotions';
 import { Reviews } from './Reviews';
 import './style.scss';
 
-export const MainPage = () => {
+interface Props {
+  i18n: any,
+};
+
+export const MainPage = (props: Props) => {
+  const { i18n } = props;
+  console.log(i18n('en').t('hello'));
+
   return (
     <div className="main-page">
       <div className="main-content _flex _flex-col">

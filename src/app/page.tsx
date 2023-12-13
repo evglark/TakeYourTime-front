@@ -1,19 +1,18 @@
 import React from 'react';
 
-import { i18n } from './locales';
+import { initI18n } from './locales';
 
 import { MainPage as Page } from '@/components/MainPage';
 
 async function getServerSideProps() {
-  const response = await fetch('http://localhost:5001/api/locals');
+  const response = await fetch(process.env.API_URL + '/api/locales');
   const data = await response.json();
   return data.locales;
 }
 
 export default async function MainPage() {
-  // const locales = await getServerSideProps();
-  // const { t } = i18n('ru', locales);
-  // console.log(t('Hello'));
+  const locales = await getServerSideProps();
+  const i18n = initI18n(locales);
 
-  return <Page />;
+  return <Page i18n={i18n} />;
 };

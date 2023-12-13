@@ -3,7 +3,7 @@ import React from 'react';
 import { MessengerIcon } from '@/components/common/icons/Messenger';
 import { WhatsappIcon } from '@/components/common/icons//Whatsapp';
 import { TelegramIcon } from '@/components/common/icons/Telegram';
-import { LogoIcon } from '@/components/Header/Logo';
+import { LogoIcon } from '@/components/Header/icons/Logo';
 
 import './style.scss';
 

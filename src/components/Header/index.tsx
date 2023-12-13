@@ -1,22 +1,29 @@
 'use client';
-import React from 'react';
+import React, { Fragment, useContext, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 import { MessengerIcon } from '@/components/common/icons/Messenger';
 import { TelegramIcon } from '@/components/common/icons/Telegram';
 import { WhatsappIcon } from '@/components/common/icons//Whatsapp';
-import { LogoIcon } from './Logo';
+import { LocaleContext } from '@/components/Providers';
+
+import { LogoIcon } from './icons/Logo';
+import { Polygon } from './icons/Polygon';
 import './style.scss';
 
 export const Header = () => {
+  const [localesModal, setLocalesModal] = useState(false);
+  const { locale, setNewLocal } = useContext(LocaleContext);
   const navigation = [
     { title: 'Service' },
     { title: 'FAQ' },
     { title: 'Subscription' },
     { title: 'Career' },
     { title: 'Gift' },
-    { title: 'English' },
+    {
+      title: 'English',
+      type: 'list'
+    },
   ];
 
   return (
@@ -29,7 +36,24 @@ export const Header = () => {
             </div>
           </Link>
         </div>
-        {navigation.map((item, index) => (
+        {navigation.map((item, index) => item.type === 'list' ? (
+          <Fragment key={item.title + index}>
+            <div
+              className="navigation-wrapper _flex _justify-between _items-center _cursor-pointer"
+              onClick={() => setLocalesModal(true)}
+            >
+              <Link href={'/'} className="_py-2 _pr-1 _pl-4">
+                <div className="nav-link">{item.title}</div>
+              </Link>
+              <Polygon />
+            </div>
+            {localesModal && (
+              <div>
+                123
+              </div>
+            )}
+          </Fragment>
+        ) : (
           <div className="navigation-wrapper _flex _flex-col _justify-center" key={item.title + index}>
             <Link href={'/'} className="_px-4 _py-2">
               <div className="nav-link">{item.title}</div>
