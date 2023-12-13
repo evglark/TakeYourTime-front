@@ -7,5 +7,8 @@ export const useLocales = (locales: ILocales[]) => {
   const { locale } = useContext(LocaleContext);
   const i18n = initI18n(locales);
 
+  console.log('useLocales', locale);
+  console.log(locales);
+
   return i18n(locale);
 };
