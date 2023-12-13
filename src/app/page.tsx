@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { initI18n } from './locales';
-
 import { MainPage as Page } from '@/components/MainPage';
 
 async function getServerSideProps() {
@@ -12,7 +10,6 @@ async function getServerSideProps() {
 
 export default async function MainPage() {
   const locales = await getServerSideProps();
-  const i18n = initI18n(locales);
 
-  return <Page i18n={i18n} />;
+  return <Page locales={locales} />;
 };

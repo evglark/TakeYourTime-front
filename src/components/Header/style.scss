@@ -1,6 +1,7 @@
 header {
   height: 85px;
   padding: 8px 0;
+  background: #F9F9F9;
 
   .logo-wrapper {
     .logo-title-wrapper {
@@ -12,10 +13,33 @@ header {
   }
 
   .navigation-wrapper {
+    position: relative;
     color: #13277E;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+  }
+
+  .navigation-sub-menu-wrapper {
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+    border-radius: 12px;
+    border: 1px solid #C1DBFF;
+    background: #F9F9F9;
+
+    .navigation-sub-menu-item {
+      border-bottom: 1px solid #C1DBFF;
+      padding: 8px 24px 8px 12px;
+      color: #232323;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
   }
 
   .sub-menu-wrapper {

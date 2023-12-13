@@ -1,6 +1,6 @@
 import i18next from 'i18next';
 
-interface ILocales {
+export interface ILocales {
   key: string;
   value: string;
   locale: string;

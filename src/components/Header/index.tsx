@@ -11,6 +11,13 @@ import { LogoIcon } from './icons/Logo';
 import { Polygon } from './icons/Polygon';
 import './style.scss';
 
+const locales = {
+  en: 'English',
+  ru: 'Russian',
+  pl: 'Polish',
+  uk: 'Ukrainian',
+};
+
 export const Header = () => {
   const [localesModal, setLocalesModal] = useState(false);
   const { locale, setNewLocal } = useContext(LocaleContext);
@@ -21,10 +28,26 @@ export const Header = () => {
     { title: 'Career' },
     { title: 'Gift' },
     {
-      title: 'English',
-      type: 'list'
+      // @ts-ignore
+      title: locales[locale],
+      type: 'list',
+      options: [
+        'English',
+        'Russian',
+        'Polish',
+        'Ukrainian',
+      ],
     },
   ];
+
+  const onSelectLocale = (e: any, language: string) => {
+    e.stopPropagation();
+    // @ts-ignore
+    const newLocale = Object.keys(locales).find(key => locales[key] === language) || 'en';
+
+    setNewLocal(newLocale);
+    setLocalesModal(false);
+  }
 
   return (
     <header>
@@ -46,12 +69,16 @@ export const Header = () => {
                 <div className="nav-link">{item.title}</div>
               </Link>
               <Polygon />
+              {localesModal ? (
+                <div className="navigation-sub-menu-wrapper">
+                  {item.options.map((option) => (
+                    <div className="navigation-sub-menu-item" onClick={(e) => onSelectLocale(e, option)} key={option}>
+                      {option}
+                    </div>
+                  ))}
+                </div>
+              ) : null}
             </div>
-            {localesModal && (
-              <div>
-                123
-              </div>
-            )}
           </Fragment>
         ) : (
           <div className="navigation-wrapper _flex _flex-col _justify-center" key={item.title + index}>

@@ -1,6 +1,8 @@
-import React from 'react';
+"use client";
+import React, { useContext } from 'react';
 
 import { Footer } from '@/components/Footer';
+import { useLocales } from '@/hooks/useLocales';
 
 import { AdditionalServices } from './AdditionalServices';
 import { Advantages } from './Advantages';
@@ -14,18 +16,14 @@ import { Promotions } from './Promotions';
 import { Reviews } from './Reviews';
 import './style.scss';
 
-interface Props {
-  i18n: any,
-};
-
-export const MainPage = (props: Props) => {
-  const { i18n } = props;
-  console.log(i18n('en').t('hello'));
+export const MainPage = (props: any) => {
+  const { locales } = props;
+  const { t } = useLocales(locales);
 
   return (
     <div className="main-page">
       <div className="main-content _flex _flex-col">
-        <MainOffer />
+        <MainOffer t={t} />
         <Advantages />
         <Costs />
         <Cleaning />
