@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 
 import { Footer } from '@/components/Footer';
 import { useLocales } from '@/hooks/useLocales';
