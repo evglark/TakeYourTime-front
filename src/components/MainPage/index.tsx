@@ -1,8 +1,9 @@
 "use client";
-import React from 'react';
+import React, { FC } from 'react';
 
 import { Footer } from '@/components/Footer';
 import { useLocales } from '@/hooks/useLocales';
+import { ILocales } from '@/locales';
 
 import { AdditionalServices } from './AdditionalServices';
 import { Advantages } from './Advantages';
@@ -16,7 +17,11 @@ import { Promotions } from './Promotions';
 import { Reviews } from './Reviews';
 import './style.scss';
 
-export const MainPage = (props: any) => {
+interface Props {
+  locales: ILocales[];
+}
+
+export const MainPage: FC<Props> = (props) => {
   const { locales } = props;
   const { t } = useLocales(locales);
 
@@ -24,8 +29,8 @@ export const MainPage = (props: any) => {
     <div className="main-page">
       <div className="main-content _flex _flex-col">
         <MainOffer t={t} />
-        <Advantages />
-        <Costs />
+        <Advantages t={t} />
+        <Costs t={t} />
         <Cleaning />
         <PriceByPhoto />
         <AdditionalServices />

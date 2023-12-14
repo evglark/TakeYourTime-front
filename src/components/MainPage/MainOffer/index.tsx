@@ -19,7 +19,6 @@ export const MainOffer = (props: any) => {
   ];
 
   return (
-    // <div className="main-offer-wrapper" style={{ backgroundImage: `url(${png.src})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
     <div className="main-offer-wrapper">
       <div className="main-svg">
         <MainOfferSVG />

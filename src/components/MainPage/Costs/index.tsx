@@ -7,7 +7,8 @@ import { Discount } from './icons/Discount';
 import { tabs, sales } from './constants';
 import './style.scss';
 
-export const Costs = () => {
+export const Costs = (props: any) => {
+  const { t } = props;
   const [tab, setTab] = useState(() => tabs[0]);
   const [salesCost, setSalesCost] = useState(() => sales[0].title);
   const router = useRouter();
@@ -50,19 +51,19 @@ export const Costs = () => {
   const costs = [
     {
       title: '1-bedroom',
-      text: 'The cost covers weekly cleaning for a single room, the kitchen, a hallway, and one bathroom',
+      text: t('The cost covers weekly cleaning for a single room, the kitchen, a hallway, and one bathroom'),
       coast: getCoast('1-bedroom'),
       oldCoast: getOldCoast('1-bedroom'),
     },
     {
       title: '2-bedroom',
-      text: 'The cost covers weekly cleaning for a two rooms, the kitchen, a hallway, and one bathroom',
+      text: t('The cost covers weekly cleaning for two rooms, the kitchen, a hallway, and one bathroom'),
       coast: getCoast('2-bedroom'),
       oldCoast: getOldCoast('2-bedroom'),
     },
     {
       title: '3-bedroom',
-      text: 'The cost covers weekly cleaning for a three rooms, the kitchen, a hallway, and one bathroom',
+      text: t('The cost covers weekly cleaning for three rooms, the kitchen, a hallway, and one bathroom'),
       coast: getCoast('3-bedroom'),
       oldCoast: getOldCoast('3-bedroom'),
     },
@@ -82,11 +83,12 @@ export const Costs = () => {
                 className={`
                   sale-item
                   ${el.title === salesCost ? ' active ' : ' '}
-                  _flex _justify-between _cursor-pointer`}
+                  _flex _justify-between _cursor-pointer
+                `}
                 onClick={() => setSalesCost(el.title)}
                 key={el.title}
               >
-                <div className="title">{el.title}</div>
+                <div className="title">{t(el.title)}</div>
                 <div className="sale">{el.sale}</div>
               </div>
             ))}
@@ -97,11 +99,13 @@ export const Costs = () => {
               <Discount />
             </div>
             <div className="_flex _flex-col">
-              <div className="title _flex _justify-center _font-semibold">Get the discount</div>
+              <div className="title _flex _justify-center _font-semibold">
+                {t('Get the discount')}
+              </div>
               <div className="_text-center">
-                <span>Promo code </span>
-                <span className="_font-semibold">TYT - 20%</span>
-                <span> off your first order</span>
+                <span>{t('Promo code')} </span>
+                <span className="_font-semibold">{t('TYT - 20%')}</span>
+                <span> {t('off your first order')}</span>
               </div>
             </div>
           </div>
@@ -110,7 +114,7 @@ export const Costs = () => {
           {costs.map((el) => (
             <div className="costs-item _flex _flex-col" key={el.title}>
               <div className="title">{el.title}</div>
-              <div className="text">{el.text}</div>
+              <div className="text _whitespace-pre-line">{el.text}</div>
               <div className="_flex _justify-center">
                 <div className="coast">{el.coast}</div>
                 <div className="old-coast _flex _flex-col _justify-center">{el.oldCoast}</div>
@@ -119,7 +123,7 @@ export const Costs = () => {
                 className="button _cursor-pointer"
                 onClick={() => router.push('/order')}
               >
-                Order
+                {t('Order')}
               </div>
             </div>
           ))}

@@ -1,24 +1,29 @@
 'use client';
-import React, { Fragment, useContext, useState } from 'react';
+import React, { FC, Fragment, useContext, useState } from 'react';
 import Link from 'next/link';
 
 import { MessengerIcon } from '@/components/common/icons/Messenger';
 import { TelegramIcon } from '@/components/common/icons/Telegram';
 import { WhatsappIcon } from '@/components/common/icons//Whatsapp';
 import { LocaleContext } from '@/components/Providers';
+import { ILocales } from '@/locales';
 
 import { LogoIcon } from './icons/Logo';
 import { Polygon } from './icons/Polygon';
 import './style.scss';
 
-const locales = {
+const mainLocales = {
   en: 'English',
   ru: 'Russian',
   pl: 'Polish',
   uk: 'Ukrainian',
 };
 
-export const Header = () => {
+interface Props {
+  locales: ILocales[];
+};
+
+export const Header: FC<Props> = ({ locales }) => {
   const [localesModal, setLocalesModal] = useState(false);
   const { locale, setNewLocal } = useContext(LocaleContext);
   const navigation = [
@@ -27,23 +32,14 @@ export const Header = () => {
     { title: 'Subscription' },
     { title: 'Career' },
     { title: 'Gift' },
-    {
-      // @ts-ignore
-      title: locales[locale],
-      type: 'list',
-      options: [
-        'English',
-        'Russian',
-        'Polish',
-        'Ukrainian',
-      ],
-    },
   ];
 
   const onSelectLocale = (e: any, language: string) => {
     e.stopPropagation();
-    // @ts-ignore
-    const newLocale = Object.keys(locales).find(key => locales[key] === language) || 'en';
+    const newLocale = Object.keys(mainLocales).find(key => {
+      // @ts-ignore
+      return mainLocales[key] === language;
+    }) || 'en';
 
     setNewLocal(newLocale);
     setLocalesModal(false);
@@ -59,34 +55,36 @@ export const Header = () => {
             </div>
           </Link>
         </div>
-        {navigation.map((item, index) => item.type === 'list' ? (
-          <Fragment key={item.title + index}>
-            <div
-              className="navigation-wrapper _flex _justify-between _items-center _cursor-pointer"
-              onClick={() => setLocalesModal(true)}
-            >
-              <Link href={'/'} className="_py-2 _pr-1 _pl-4">
-                <div className="nav-link">{item.title}</div>
-              </Link>
-              <Polygon />
-              {localesModal ? (
-                <div className="navigation-sub-menu-wrapper">
-                  {item.options.map((option) => (
-                    <div className="navigation-sub-menu-item" onClick={(e) => onSelectLocale(e, option)} key={option}>
-                      {option}
-                    </div>
-                  ))}
-                </div>
-              ) : null}
-            </div>
-          </Fragment>
-        ) : (
-          <div className="navigation-wrapper _flex _flex-col _justify-center" key={item.title + index}>
+        {navigation.map(navItem => (
+          <div className="navigation-wrapper _flex _flex-col _justify-center" key={navItem.title}>
             <Link href={'/'} className="_px-4 _py-2">
-              <div className="nav-link">{item.title}</div>
+              <div className="nav-link">{navItem.title}</div>
             </Link>
           </div>
         ))}
+        <div
+          className="navigation-wrapper _flex _justify-between _items-center _cursor-pointer"
+          onClick={() => setLocalesModal(true)}
+        >
+          <Link href={'/'} className="_py-2 _pr-1 _pl-4">
+            {/* @ts-ignore */}
+            <div className="nav-link">{mainLocales[locale]}</div>
+          </Link>
+          <Polygon />
+          {localesModal ? (
+            <div className="navigation-sub-menu-wrapper">
+              {Object.values(mainLocales).map((option) => (
+                <div
+                  className="navigation-sub-menu-item"
+                  onClick={(e) => onSelectLocale(e, option)}
+                  key={option}
+                >
+                  {option}
+                </div>
+              ))}
+            </div>
+          ) : null}
+        </div>
         <div className="sub-menu-wrapper _ml-auto _flex _gap-6">
           <div className="_flex _flex-col _justify-center">+48 575 247 882</div>
           <div className="_flex _gap-3">

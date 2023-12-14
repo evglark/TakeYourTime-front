@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { MainPage as Page } from '@/components/MainPage';
+import { Providers } from '@/components/Providers';
+import { Header } from '@/components/Header';
+import { MainPage } from '@/components/MainPage';
 
 async function getServerSideProps() {
   const response = await fetch(process.env.API_URL + '/api/locales', {
@@ -15,7 +17,15 @@ async function getServerSideProps() {
   return data.locales;
 }
 
-export default async function MainPage(props: any) {
+export default async function Page(props: any) {
   const locales = await getServerSideProps();
-  return <Page locales={locales} />;
+
+  return (
+    <Providers>
+      <Header locales={locales} />
+      <main>
+        <MainPage locales={locales} />
+      </main>
+    </Providers>
+  );
 };

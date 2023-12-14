@@ -1,21 +1,16 @@
 "use client";
 import React, { Fragment, useState } from 'react';
-import Image from 'next/image';
 
-import { Switcher } from '../../common/Switcher';
-
-import { tabs, rooms, options } from './constants';
+import { rooms, options } from './constants';
 import { getRoom } from './utils';
 import './style.scss';
 
 export const Cleaning = () => {
-  const [tab, setTab] = useState(() => tabs[0]);
   const [room, setRoom] = useState(() => rooms[0]);
 
   return (
     <div className="costs-component _flex _flex-col _items-center">
       <div className="main-title">What cleaning consists of</div>
-      <Switcher tab={tab} tabs={tabs} onClick={(el: string) => setTab(el)} />
       <div className={"room-img-wrapper" + " " + room.toLowerCase()}>
         {getRoom(room)}
         {options.find((el) => el.room === room)?.options.map((el) => {
