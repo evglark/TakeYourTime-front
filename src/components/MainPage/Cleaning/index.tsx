@@ -1,5 +1,5 @@
 "use client";
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useRef, useLayoutEffect } from 'react';
 
 import { rooms, options } from './constants';
 import { getRoom } from './utils';
@@ -7,15 +7,37 @@ import './style.scss';
 
 export const Cleaning = () => {
   const [room, setRoom] = useState(() => rooms[0]);
+  const [imgWidth, setImgWidth] = useState(0);
+  const [imgHeight, setImgHeight] = useState(0);
+  const myElementRef = useRef<HTMLDivElement>(null);
+
+  const countMarginTop = (top: number, newHeight: number): number => {
+    return Math.round(top * (newHeight / 850));
+  }
+
+  const countMarginLeft = (left: number, newWidth: number): number => {
+    return Math.round(left * (newWidth / 1232));
+  }
+
+  useLayoutEffect(() => {
+    if (myElementRef.current) {
+      const el = myElementRef.current.getBoundingClientRect();
+      setImgWidth(el.width);
+      setImgHeight(el.height);
+    }
+  }, []);
 
   return (
     <div className="costs-component _flex _flex-col _items-center">
       <div className="main-title">What cleaning consists of</div>
-      <div className={"room-img-wrapper" + " " + room.toLowerCase()}>
+      <div className={"room-img-wrapper" + " " + room.toLowerCase()} ref={myElementRef}>
         {getRoom(room)}
         {options.find((el) => el.room === room)?.options.map((el) => {
-          const position = { top: el.position[1], left: el.position[0] };
           const flexDirection = { flexDirection: el.revers ? 'row-reverse' : 'row' };
+          const position = {
+            top: countMarginTop(el.position[1], imgHeight),
+            left: countMarginLeft(el.position[0], imgWidth),
+          };
 
           return (
             <Fragment key={el.title + JSON.stringify(el.position)}>
