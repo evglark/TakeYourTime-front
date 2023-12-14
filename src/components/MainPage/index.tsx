@@ -1,5 +1,5 @@
 "use client";
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 
 import { Footer } from '@/components/Footer';
 import { useLocales } from '@/hooks/useLocales';
@@ -24,6 +24,7 @@ interface Props {
 export const MainPage: FC<Props> = (props) => {
   const { locales } = props;
   const { t } = useLocales(locales);
+  const [isPressed, setIsPressed] = useState(false);
 
   return (
     <div className="main-page">
