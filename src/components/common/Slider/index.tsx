@@ -9,7 +9,7 @@ interface Props {
 		content: () => JSX.Element;
 	}[];
 	step?: number;
-  status?: boolean;
+	status?: boolean;
 };
 
 export const Slider: FC<Props> = (props) => {
@@ -25,31 +25,33 @@ export const Slider: FC<Props> = (props) => {
 	};
 
 	return (
-		<div className="slider-component">
-			<div className="_mb-6">
-				<button onClick={prevSlide} className="arrow-button arrow-button-left _cursor-pointer _opacity-75 hover:_opacity-100 _z-10">
-					{'<'}
-				</button>
-				<div className="_flex _transition-transform _duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 25}%)` }}>
-					{elements.map((el) => (
-						<div className="_flex-shrink-0 _w-1/4 _flex _items-center _justify-center" key={el.id}>
-							{el.content()}
-						</div>
-					))}
+		<div className="slider-wrapper">
+			<button onClick={prevSlide} className="arrow-button arrow-button-left _cursor-pointer _opacity-75 hover:_opacity-100 _z-10">
+				{'<'}
+			</button>
+			<div className="slider-component">
+				<div className="_mb-6">
+					<div className="_flex _transition-transform _duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 25}%)` }}>
+						{elements.map((el) => (
+							<div className="_flex-shrink-0 _w-1/4 _flex _items-center _justify-center" key={el.id}>
+								{el.content()}
+							</div>
+						))}
+					</div>
 				</div>
-				<button onClick={nextSlide} className="arrow-button arrow-button-right _cursor-pointer _opacity-75 hover:_opacity-100 _z-10">
-					{'>'}
-				</button>
-			</div>
-			<div className='_flex _justify-center _gap-2'>
-				{Array.from({ length: elements.length / step }, (_, i) => {
-					const subElement = currentSlide / step === i;
+				<div className='_flex _justify-center _gap-2'>
+					{Array.from({ length: elements.length / step }, (_, i) => {
+						const subElement = currentSlide / step === i;
 
-					return (
-						<div className={`slider-status _transition-all _duration-500 ${subElement ? '' : 'sub'}`} key={'slider-status' + i} />
-					)
-				})}
+						return (
+							<div className={`slider-status _transition-all _duration-500 ${subElement ? '' : 'sub'}`} key={'slider-status' + i} />
+						)
+					})}
+				</div>
 			</div>
+			<button onClick={nextSlide} className="arrow-button arrow-button-right _cursor-pointer _opacity-75 hover:_opacity-100 _z-10">
+				{'>'}
+			</button>
 		</div>
 	);
 };

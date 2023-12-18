@@ -15,7 +15,7 @@ export const Writer: FC<Props> = (props) => {
     <div>
       {text.split('\\n ').map((line, i, arr) => (
         <Fragment key={line}>
-          <div className='_whitespace-nowrap'>
+          <div className="_whitespace-nowrap">
             {line}{i < arr.length - 1 ? <br /> : null}
           </div>
         </Fragment>

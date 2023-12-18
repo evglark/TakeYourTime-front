@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
 
-import cleaningSvg from './icons/cleaning.png';
+import cleaningSvg from './icons/cleaning.svg';
 import ecologySvg from './icons/ecology.svg';
 import ozoneSvg from './icons/ozone.svg';
 import plusSvg from './icons/plus.svg';
-import rectangleSvg from './icons/rectangle.png';
+import rectangleSvg from './icons/rectangle.svg';
 import './style.scss';
 
 interface IProps {
@@ -43,7 +43,9 @@ export const DiscountItem: FC<IProps> = (props) => {
               {/* @ts-ignore */}
               <Image src={serviceIcons[services[0]]} alt='' />
             </div>
-            <div>{services[0]}</div>
+            <div className="_whitespace-nowrap">
+              {services[0]}
+            </div>
           </div>
           <div>
             <Image src={plusSvg} alt=''/>
@@ -53,13 +55,13 @@ export const DiscountItem: FC<IProps> = (props) => {
               {/* @ts-ignore */}
               <Image src={serviceIcons[services[1]]} alt='' />
             </div>
-            <div>{services[1]}</div>
+            <div className="_whitespace-nowrap">
+              {services[1]}
+            </div>
           </div>
         </div>
-        <div className="_mx-auto">
-          <div className="order-button-wrapper _flex _flex-col _justify-center">
-            <div>Order</div>
-          </div>
+        <div className="order-button-wrapper _flex _flex-col _justify-center">
+          <div>Order</div>
         </div>
       </div>
     </div>
