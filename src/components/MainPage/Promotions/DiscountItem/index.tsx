@@ -29,7 +29,7 @@ export const DiscountItem: FC<IProps> = (props) => {
 
   return (
     <div className="discount-item-component">
-      <div className="discounts-card-wrapper _flex _flex-col _gap-6" key={key}>
+      <div className="discounts-card-wrapper _flex _flex-col _justify-center _gap-6" key={key}>
         <div className="title-wrapper _flex _justify-center">
           <div>Save</div>
           {/* @ts-ignore */}

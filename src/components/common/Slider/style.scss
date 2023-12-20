@@ -15,11 +15,13 @@
   }
 
   .arrow-button-left {
-    left: -24px;
+    top: calc(50% - 20px);
+    left: -49px;
   }
 
   .arrow-button-right {
-    right: -36px;
+    top: calc(50% - 20px);
+    right: -49px;
   }
 
   .slider-component {

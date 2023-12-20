@@ -9,7 +9,7 @@ import './style.scss';
 
 export const Footer = () => {
   return (
-    <div className="footer-wrapper">
+    <footer className="footer-wrapper">
       <div className="_flex _justify-center">
         <div className="logo-wrapper">
           <LogoIcon />
@@ -43,6 +43,6 @@ export const Footer = () => {
       <div className="_flex _justify-center">
         All rights reserved
       </div>
-    </div>
+    </footer>
   )
 };

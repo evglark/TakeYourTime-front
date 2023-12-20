@@ -4,8 +4,10 @@ import Image from 'next/image';
 import { MessengerIcon } from '@/components/common/icons/Messenger';
 import { TelegramIcon } from '@/components/common/icons//Telegram';
 import { WhatsappIcon } from '@/components/common/icons/Whatsapp';
-import bubblesIcon from './icons/bubbles.svg';
-import iphoneIcon from './icons/iphone.svg';
+
+import bubblesSvg from './icons/bubbles.svg';
+import iPhoneSvg from './icons/iPhone.svg';
+import chatPng from './icons/chat.png';
 import './style.scss';
 
 export const PriceByPhoto = () => {
@@ -20,8 +22,9 @@ export const PriceByPhoto = () => {
             {'Send a photo of the room and comments in any convenient \n messenger, and we will make an accurate calculation for you'}
           </div>
           <div className="img-wrapper _flex _justify-center">
-            <Image src={bubblesIcon} alt='' />
-            <Image src={iphoneIcon} alt='' priority />
+            <Image src={bubblesSvg} alt='' />
+            <Image src={chatPng} alt='' />
+            <Image src={iPhoneSvg} alt='' priority />
           </div>
         </div>
         <div className="_flex _justify-center _gap-6">

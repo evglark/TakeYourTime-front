@@ -24,6 +24,8 @@ import petToiletTraySvg from './icons/pet-toilet-tray.svg';
 import readingRoomSvg from './icons/reading-room.svg';
 import rectangleSvg from './icons/rectangle.svg';
 import showerSvg from './icons/shower.svg';
+import wateringPlantsSvg from './icons/watering-plants.svg';
+import windowSvg from './icons/window.svg';
 
 import './style.scss';
 
@@ -34,7 +36,7 @@ export const AdditionalServices = () => {
     { title: 'Clean the hood', icons: cookerHoodSvg },
     { title: 'Clean the microwave', icons: microwaveSvg },
     { title: 'Clean kitchen cabinets', icons: kitchenSvg },
-    { title: 'Wash the window', icons: '' },
+    { title: 'Wash the window', icons: windowSvg },
     { title: 'Wash the dishes', icons: cleanDishesSvg },
     { title: 'Ozonation', icons: ozoneLayerSvg },
     { title: 'Ironing', icons: ironSvg },
@@ -42,7 +44,7 @@ export const AdditionalServices = () => {
     { title: 'Clean animal’s tray', icons: petToiletTraySvg },
     { title: 'Laundry', icons: laundrySvg },
     { title: 'Extra Tasks', icons: hoursglassSvg },
-    { title: 'Water plants', icons: '' },
+    { title: 'Water plants', icons: wateringPlantsSvg },
     { title: 'Wardrobe cleaning', icons: closetSvg },
     { title: 'Baby stroller cleaning', icons: babyStrollerSvg },
     { title: 'Cleaning bath or shower stall', icons: showerSvg },
@@ -75,18 +77,22 @@ export const AdditionalServices = () => {
         elements={getServicesGroup().map((el => ({
           id: el.id,
           content: (): JSX.Element => (
-            <div className="_flex _flex-col _items-stretch _gap-6">
-              <div className="service-wrapper _flex _flex-col">
-                <div className="item-icons _flex _justify-center">
+            <div className="_px-2.5 _flex _flex-col _w-full _gap-6">
+              <div className="service-wrapper _w-full _flex _flex-col _justify-center _gap-5">
+                <div className="_flex _justify-center">
                   <Image src={el.coll[0].icons} alt='' />
                 </div>
-                <div className="item-title">{el.coll[0].title}</div>
+                <div className="item-title _whitespace-nowrap">
+                  {el.coll[0].title}
+                </div>
               </div>
-              <div className="service-wrapper _flex _flex-col">
-                <div className="item-icons _flex _justify-center">
+              <div className="service-wrapper _w-full _flex _flex-col _justify-center _gap-5">
+                <div className="_flex _justify-center">
                   <Image src={el.coll[1].icons} alt='' />
                 </div>
-                <div className="item-title">{el.coll[1].title}</div>
+                <div className="item-title _whitespace-nowrap">
+                  {el.coll[1].title}
+                </div>
               </div>
             </div>
           )

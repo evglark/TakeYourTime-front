@@ -30,7 +30,7 @@ export const Header: FC<Props> = ({ locales }) => {
     { title: 'Service' },
     { title: 'FAQ' },
     { title: 'Subscription' },
-    { title: 'Career' },
+    { href: '/career', title: 'Career' },
     { title: 'Gift' },
   ];
 
@@ -57,7 +57,7 @@ export const Header: FC<Props> = ({ locales }) => {
         </div>
         {navigation.map(navItem => (
           <div className="navigation-wrapper _flex _flex-col _justify-center" key={navItem.title}>
-            <Link href={'/'} className="_px-4 _py-2">
+            <Link href={navItem.href || '/'} className="_px-4 _py-2">
               <div className="nav-link">{navItem.title}</div>
             </Link>
           </div>
