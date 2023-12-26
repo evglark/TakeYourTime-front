@@ -11,7 +11,7 @@ export const Instruction = () => {
           { step: 2, text: 'Schedule an interview' },
           { step: 3, text: 'Sign the contract' },
         ].map(el => (
-          <div className="step-card _flex _flex-col _justify-center">
+          <div className="step-card _flex _flex-col _justify-center" key={el.step}>
             <div className="step-number">
               {el.step}
             </div>
