@@ -6,7 +6,7 @@ import { TelegramIcon } from '@/components/common/icons//Telegram';
 import { WhatsappIcon } from '@/components/common/icons/Whatsapp';
 
 import bubblesSvg from './icons/bubbles.svg';
-import iPhoneSvg from './icons/iPhone.svg';
+import iPhoneSvg from './icons/iPhone2.svg';
 import chatPng from './icons/chat.png';
 import './style.scss';
 
