@@ -30,7 +30,7 @@ export const Header: FC<Props> = ({ locales }) => {
     { title: 'Service' },
     { title: 'FAQ' },
     { title: 'Subscription' },
-    { href: '/career', title: 'Career' },
+    { href: '/career', title: 'Career 1' },
     { title: 'Gift' },
   ];
 
