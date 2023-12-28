@@ -12,16 +12,21 @@
 
   .item-faq-wrapper {
     padding: 30px 40px;
-    width: 606px;
     border-radius: 56px;
     background: #ECF0FF;
+    color: #232323;
 
     .item-title {
-      color: #232323;
       font-size: 20px;
       font-weight: 500;
       line-height: 22px;
-      letter-spacing: -0.38px;
     }
+  }
+
+  .item-faq-content {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
   }
 }

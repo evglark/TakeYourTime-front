@@ -14,7 +14,6 @@ import { MainOffer } from './MainOffer';
 import { Order } from './Order';
 import { PriceByPhoto } from './PriceByPhoto';
 import { Promotions } from './Promotions';
-import { Reviews } from './Reviews';
 import './style.scss';
 
 interface Props {
@@ -37,7 +36,6 @@ export const MainPage: FC<Props> = (props) => {
         <AdditionalServices />
         <Promotions />
         <FAQ />
-        <Reviews />
         <div className="_flex _flex-col">
           <Order />
           <Footer />
