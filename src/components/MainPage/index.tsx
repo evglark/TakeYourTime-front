@@ -28,6 +28,7 @@ export const MainPage: FC<Props> = (props) => {
   return (
     <div className="main-page">
       <div className="main-content _flex _flex-col">
+        1
         <MainOffer t={t} />
         <Advantages t={t} />
         <Costs t={t} />
