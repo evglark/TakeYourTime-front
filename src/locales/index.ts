@@ -18,7 +18,9 @@ const getLocales = (locales: ILocales[], lang: string) => {
 export const initI18n = (locales: ILocales[]) => {
   const resources = {
     en: { translation: getLocales(locales, 'en') },
+    pl: { translation: getLocales(locales, 'pl') },
     ru: { translation: getLocales(locales, 'ru') },
+    uk: { translation: getLocales(locales, 'uk') },
   }
 
   return (lng: string) => {

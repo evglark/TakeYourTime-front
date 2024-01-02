@@ -2,6 +2,7 @@
 import React, { FC, Fragment, useContext, useState } from 'react';
 import Link from 'next/link';
 
+import { useLocales } from '@/hooks/useLocales';
 import { MessengerIcon } from '@/components/common/icons/Messenger';
 import { TelegramIcon } from '@/components/common/icons/Telegram';
 import { WhatsappIcon } from '@/components/common/icons//Whatsapp';
@@ -24,14 +25,15 @@ interface Props {
 };
 
 export const Header: FC<Props> = ({ locales }) => {
+  const { t } = useLocales(locales);
   const [localesModal, setLocalesModal] = useState(false);
   const { locale, setNewLocal } = useContext(LocaleContext);
   const navigation = [
-    { title: 'Service' },
-    { title: 'FAQ' },
-    { title: 'Subscription' },
-    { href: '/career', title: 'Career' },
-    { title: 'Gift' },
+    { title: t('Service') },
+    { title: t('FAQ') },
+    { title: t('Subscription') },
+    { href: '/career', title: t('Career') },
+    { title: t('Gift') },
   ];
 
   const onSelectLocale = (e: any, language: string) => {
