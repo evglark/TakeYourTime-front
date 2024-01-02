@@ -65,4 +65,30 @@
       }
     }
   }
+
+  .people-wrapper-man {
+    position: absolute;
+    height: 82%;
+    width: 440px;
+    top: 16%;
+    left: 35%;
+    z-index: 3;
+  }
+
+  .people-wrapper-woman {
+    position: absolute;
+    height: 68%;
+    width: 440px;
+    top: 23%;
+    left: 58%;
+    z-index: 2;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .main-offer-wrapper {
+    .people-wrapper-man, .people-wrapper-woman {
+      display: none;
+    }
+  }
 }
