@@ -7,6 +7,7 @@ import { ILocales } from '@/locales';
 
 import { AdditionalServices } from './AdditionalServices';
 import { Advantages } from './Advantages';
+import { AllServices } from './AllServices';
 import { Cleaning } from './Cleaning';
 import { Costs } from './Costs';
 import { FAQ } from './FAQ';
@@ -29,6 +30,7 @@ export const MainPage: FC<Props> = (props) => {
       <div className="main-content _flex _flex-col">
         <MainOffer t={t} />
         <Advantages t={t} />
+        <AllServices t={t} />
         <Cleaning t={t} />
         <Costs t={t} />
         <AdditionalServices t={t} />

@@ -1,13 +1,16 @@
 "use client";
 import React, { Fragment, useState, useRef, useLayoutEffect } from 'react';
+import { Switcher } from '@/components/common/Switcher';
 
-import { rooms, options } from './constants';
+import { tabs, rooms, options } from './constants';
 import { getRoom } from './utils';
 import './style.scss';
 
 export const Cleaning = (props: any) => {
   const { t } = props;
-  const [room, setRoom] = useState(() => rooms[0]);
+  const [tab, setTab] = useState(() => tabs[0]);
+  // @ts-ignore
+  const [room, setRoom] = useState(() => rooms[tab][0]);
   const [imgWidth, setImgWidth] = useState(0);
   const [imgHeight, setImgHeight] = useState(0);
   const myElementRef = useRef<HTMLDivElement>(null);
@@ -30,10 +33,14 @@ export const Cleaning = (props: any) => {
 
   return (
     <div className="costs-component _flex _flex-col _items-center">
-      <div className="main-title">What cleaning consists of</div>
+      <div className="main-title">{t('What cleaning consists of')}</div>
+      <div className="switcher-wrapper">
+        <Switcher tab={tab} tabs={tabs} t={t} onClick={(el: string) => setTab(el)} />
+      </div>
       <div className={"room-img-wrapper" + " " + room.toLowerCase()} ref={myElementRef}>
         {getRoom(room)}
-        {options.find((el) => el.room === room)?.options.map((el) => {
+        {/* @ts-ignore */}
+        {options[tab].find((el: any) => el.room === room)?.options.map((el) => {
           const flexDirection = { flexDirection: el.revers ? 'row-reverse' : 'row' };
           const position = {
             top: countMarginTop(el.position[1], imgHeight),
@@ -54,7 +61,8 @@ export const Cleaning = (props: any) => {
         })}
       </div>
       <div className="_flex _justify-around">
-        {rooms.map((el) => (
+        {/* @ts-ignore */}
+        {rooms[tab].map((el: any) => (
           <div
             className={`room-item ${el === room && 'active'}`}
             onClick={() => setRoom(el as string)}

@@ -9,9 +9,15 @@
     line-height: 52px;
   }
 
+  .switcher-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   .room-img-wrapper {
     margin: 32px 0;
     position: relative;
+    overflow: hidden;
 
     .room-services {
       position: absolute;

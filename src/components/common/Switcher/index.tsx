@@ -6,14 +6,15 @@ interface Props {
   tab: string;
   tabs: string[];
   onClick: (el: string) => void;
+  t?: any
 }
 
-export const Switcher: FC<Props> = ({ tabs, tab, onClick }) => (
+export const Switcher: FC<Props> = ({ tabs, tab, onClick, t = (str: string) => str }) => (
   <div className="costs-switcher _flex _justify-around">
     {tabs.map((el: string) => (
       <div className="costs-switcher-title _cursor-pointer" onClick={() => onClick(el)} key={el}>
         <div className={el === tab ? 'active' : ''}>
-          <b>{el}</b>
+          <b>{t(el)}</b>
         </div>
       </div>
     ))}

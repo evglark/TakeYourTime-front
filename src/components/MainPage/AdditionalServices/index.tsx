@@ -53,7 +53,7 @@ export const AdditionalServices = (props: any) => {
     { title: 'Clean the balcony', icons: balconySvg },
     { title: 'Clean the bathroom', icons: bathroomSvg },
     { title: 'Dry cleaning', icons: rectangleSvg },
-    { title: 'Cleaning the corridor', icons: '' },
+    { title: 'Cleaning the corridor', icons: kitchenSvg },
     { title: 'Deep kitchen cleaning', icons: kitchenSvg },
     { title: 'Cleaning the cloak room', icons: hangerSvg },
   ];

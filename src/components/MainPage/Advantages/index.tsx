@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Img from 'next/image';
+import Image from 'next/image';
 
 import { Writer } from '@/components/common/Writer';
 import BookmarkTabs from './icons/BookmarkTabs.svg';
@@ -23,7 +23,7 @@ export const Advantages = (props: any) => {
         {advantages.map(el => (
           <div className="_flex _flex-col" key={el.title}>
             <div className="_flex _justify-center _basis-1/4">
-              <Img src={el.icon} alt=''/>
+              <Image src={el.icon} alt=''/>
             </div>
             <div className="_mt-2 advantage-title _text-center">
               {t(el.title)}

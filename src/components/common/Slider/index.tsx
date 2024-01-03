@@ -1,6 +1,8 @@
 "use client";
 import React, { FC, useState } from 'react';
 
+import { LeftArrow } from './icons/LeftArrow';
+import { RightArrow } from './icons/RightArrow';
 import './style.scss';
 
 interface Props {
@@ -26,9 +28,9 @@ export const Slider: FC<Props> = (props) => {
 
 	return (
 		<div className="slider-wrapper">
-			<button onClick={prevSlide} className="arrow-button arrow-button-left _cursor-pointer _opacity-75 hover:_opacity-100 _z-10">
-				{'<'}
-			</button>
+			<div className="arrow-button-left _cursor-pointer" onClick={prevSlide}>
+				<LeftArrow />
+			</div>
 			<div className="slider-component">
 				<div className="_mb-6">
 					<div className="_flex _transition-transform _duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 25}%)` }}>
@@ -49,9 +51,9 @@ export const Slider: FC<Props> = (props) => {
 					})}
 				</div>
 			</div>
-			<button onClick={nextSlide} className="arrow-button arrow-button-right _cursor-pointer _opacity-75 hover:_opacity-100 _z-10">
-				{'>'}
-			</button>
+			<div className="arrow-button-right _cursor-pointer" onClick={nextSlide}>
+				<RightArrow />
+			</div>
 		</div>
 	);
 };

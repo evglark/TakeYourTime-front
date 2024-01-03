@@ -20,15 +20,15 @@ export const Promotions = (props: any) => {
   ];
 
   const discounts = [
-    { save: '-15%', color: 'yellow', services: ['Cleaning', 'Ozonation'] },
-    { save: '-15%', color: 'yellow', services: ['Cleaning', 'Dry cleaning'] },
-    { save: '-15%', color: 'yellow', services: ['Eco cleaning', 'Dry cleaning'] },
-    { save: '-15%', color: 'green', services: ['Eco cleaning', 'Ozonation'] },
+    { save: '-15%', services: ['Cleaning', 'Ozonation'] },
+    { save: '-15%', services: ['Cleaning', 'Dry cleaning'] },
+    { save: '-15%', services: ['Eco cleaning', 'Dry cleaning'] },
+    { save: '-15%', services: ['Eco cleaning', 'Ozonation'] },
   ];
 
   return (
     <div className="promotions-component _flex _flex-col">
-      <div className="title">Promotions and discounts</div>
+      <div className="title">{t('Promotions and discounts')}</div>
       <div className="promotions-block _flex _justify-around">
         {promotions.map((el, i) => (
           <div className="promotion-card" key={el.text + i}>

@@ -6,8 +6,8 @@ import { TelegramIcon } from '@/components/common/icons//Telegram';
 import { WhatsappIcon } from '@/components/common/icons/Whatsapp';
 
 import bubblesSvg from './icons/bubbles.svg';
-import iPhoneSvg from './icons/iPhone2.svg';
-import chatPng from './icons/chat.png';
+import iPhoneSvg from './icons/iPhone.svg';
+import chatPng from './images/chat.png';
 import './style.scss';
 
 export const PriceByPhoto = (props: any) => {
@@ -18,7 +18,7 @@ export const PriceByPhoto = (props: any) => {
       <div className="white-bg">
         <div className="_flex _flex-col">
           <div className="title _flex _justify-center">
-            {t('Get the price from the photo \n with 99% accuracy')}
+            {t('Get the price from the photo with 99% accuracy')}
           </div>
           <div className="text _flex _justify-center">
             {t('Send a photo of the room and comments in any convenient \n messenger, and we will make an accurate calculation for you')}
@@ -26,7 +26,7 @@ export const PriceByPhoto = (props: any) => {
           <div className="img-wrapper _flex _justify-center">
             <Image src={bubblesSvg} alt='' />
             <Image src={chatPng} alt='' />
-            <Image src={iPhoneSvg} alt='' priority />
+            <Image src={iPhoneSvg} alt='' />
           </div>
         </div>
         <div className="_flex _justify-center _gap-6">

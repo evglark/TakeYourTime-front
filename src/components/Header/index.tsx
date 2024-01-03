@@ -1,5 +1,5 @@
 'use client';
-import React, { FC, Fragment, useContext, useState } from 'react';
+import React, { FC, useContext, useState } from 'react';
 import Link from 'next/link';
 
 import { useLocales } from '@/hooks/useLocales';
@@ -88,7 +88,7 @@ export const Header: FC<Props> = ({ locales }) => {
           ) : null}
         </div>
         <div className="sub-menu-wrapper _ml-auto _flex _gap-6">
-          <div className="_flex _flex-col _justify-center">+48 575 247 882</div>
+          <div className="_flex _flex-col _justify-center">+48 730 003 997</div>
           <div className="_flex _gap-3">
             <div className="icon _flex _flex-col _justify-center">
               <TelegramIcon />
