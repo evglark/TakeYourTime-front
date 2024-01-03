@@ -35,7 +35,7 @@ export const FAQ = (props: any) => {
             <div className={`_w-full item-faq-wrapper`} key={JSON.stringify(item)}>
               <div className="_flex _justify-between">
                 <div className="item-title">
-                  {t(item.title)}
+                  <b>{t(item.title)}</b>
                 </div>
                 <div style={{ width: 44 }} className="_flex _justify-center _items-center _cursor-pointer" onClick={() => toggleActiveQuest(item.title)}>
                   <Image src={arrowDownSvg} alt="" />
@@ -54,7 +54,7 @@ export const FAQ = (props: any) => {
             <div className="_w-full item-faq-wrapper" key={JSON.stringify(item)}>
               <div className="_flex _justify-between">
                 <div className="item-title">
-                  {t(item.title)}
+                  <b>{t(item.title)}</b>
                 </div>
                 <div style={{ width: 44 }} className="_flex _justify-center _items-center _cursor-pointer" onClick={() => toggleActiveQuest(item.title)}>
                   <Image src={arrowDownSvg} alt="" />
