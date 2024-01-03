@@ -6,6 +6,7 @@ import mainPng from './images/main.png';
 import manPng from './images/man.png';
 import womanPng from './images/women.png';
 import { CheckSvg } from './icons/check-fill';
+import { CheckSvg as chc } from './icons/Vector';
 import './style.scss';
 
 export const MainOffer = (props: any) => {
@@ -29,8 +30,8 @@ export const MainOffer = (props: any) => {
       <div className="people-wrapper-man" style={getImgStyle(manPng.src)} />
       <div className="people-wrapper-woman" style={getImgStyle(womanPng.src)} />
       <div className="vector-wrapper">
-        <svg xmlns="http://www.w3.org/2000/svg" width="597" height="523" viewBox="0 0 597 523" fill="none">
-          <path fillRule="evenodd" clipRule="evenodd" d="M287.048 1.87918C372.352 0.788133 467.246 -11.8611 529.087 46.9061C591.729 106.433 608.657 204.766 589.131 288.945C572.407 361.05 496.589 394.68 437.945 439.842C390.829 476.125 346.258 516.056 287.048 521.579C221.883 527.657 155.523 512.62 105.105 470.888C49.7983 425.11 15.1905 360.149 5.99187 288.945C-4.67255 206.396 -7.10886 112.495 51.1219 53.0193C109.644 -6.75415 203.403 2.94901 287.048 1.87918Z" fill="#EBEFFF" fillOpacity="0.93"/>
+        <svg width="616" height="522" viewBox="0 0 616 522" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M296.28 1.87603C384.327 0.786814 482.273 -11.8413 546.104 46.8276C610.759 106.255 628.232 204.423 608.079 288.462C590.816 360.446 512.56 394.02 452.029 439.106C403.399 475.329 357.394 515.192 296.28 520.706C229.019 526.774 160.525 511.762 108.486 470.1C51.3998 424.399 15.679 359.546 6.18458 288.462C-4.82282 206.05 -7.33749 112.307 52.7661 52.9306C113.17 -6.74285 209.944 2.94407 296.28 1.87603Z" fill="#EBEFFF" fill-opacity="0.93"/>
         </svg>
         <div className="offer-wrapper">
           <div className="title main-title">

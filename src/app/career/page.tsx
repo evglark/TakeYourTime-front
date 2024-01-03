@@ -13,7 +13,7 @@ export default async function CareerPage() {
     <Providers>
       <Header locales={locales} />
       <main>
-        <Page />
+        <Page locales={locales} />
       </main>
     </Providers>
   );

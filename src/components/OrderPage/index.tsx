@@ -11,7 +11,7 @@ import { Summary } from './Summary';
 import { UserData } from './UserData';
 import './style.scss';
 
-export const OrderPage = () => {
+export const OrderPage = (props: any) => {
   const tabs = ['Apartment', 'Private house'];
   const [tab, setTab] = useState('Apartment');
 

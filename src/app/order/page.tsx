@@ -1,4 +1,3 @@
-"use client";
 import React from 'react';
 
 import { Providers } from '@/components/Providers';
@@ -14,7 +13,7 @@ export default async function OrderPage() {
     <Providers>
       <Header locales={locales} />
       <main>
-        <Page />
+        <Page locales={locales} />
       </main>
     </Providers>
   );

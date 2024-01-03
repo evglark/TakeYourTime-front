@@ -29,7 +29,6 @@ export const FAQ = (props: any) => {
       <div className="title">
         {t('FAQ')}
       </div>
-      {activeQuest}
       <div className="_w-full _flex _space-between _gap-5">
         <div className="_w-6/12 _flex _flex-col _gap-6">
           {faqQuestions.map((item, i) => i%2 ? (

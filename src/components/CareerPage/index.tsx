@@ -8,7 +8,9 @@ import { InputForm } from './InputForm';
 import { Instruction } from './Instruction';
 import './style.scss';
 
-interface Props {}
+interface Props {
+  locales: any;
+}
 
 export const CareerPage: FC<Props> = (props) => {
   return (

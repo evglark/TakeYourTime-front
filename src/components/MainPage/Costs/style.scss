@@ -54,7 +54,10 @@
       .sale-item.active {
         border-radius: 88px;
         background: #2B8AFC;
-        color: #F9F9F9;
+
+        .title {
+          color: #F9F9F9;
+        }
       }
     }
 

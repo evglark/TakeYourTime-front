@@ -23,17 +23,16 @@ interface Props {
 export const MainPage: FC<Props> = (props) => {
   const { locales } = props;
   const { t } = useLocales(locales);
-  const [isPressed, setIsPressed] = useState(false);
 
   return (
     <div className="main-page">
       <div className="main-content _flex _flex-col">
         <MainOffer t={t} />
         <Advantages t={t} />
-        <Costs t={t} />
         <Cleaning t={t} />
-        <PriceByPhoto t={t} />
+        <Costs t={t} />
         <AdditionalServices t={t} />
+        <PriceByPhoto t={t} />
         <Promotions t={t} />
         <FAQ t={t} />
         <div className="_flex _flex-col">

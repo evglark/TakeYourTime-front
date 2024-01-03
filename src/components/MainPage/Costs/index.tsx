@@ -77,7 +77,7 @@ export const Costs = (props: any) => {
       <Switcher tab={tab} tabs={tabs} onClick={(el: string) => setTab(el)} />
       <div className="costs-sales-wrapper _flex _justify-center">
         {tab === 'Subscription' ? (
-          <div className="sales-list _flex _flex-col">
+          <div className="sales-list _flex _flex-col _justify-center">
             {sales.map((el) => (
               <div
                 className={`
