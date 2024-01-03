@@ -10,16 +10,18 @@ import iPhoneSvg from './icons/iPhone2.svg';
 import chatPng from './icons/chat.png';
 import './style.scss';
 
-export const PriceByPhoto = () => {
+export const PriceByPhoto = (props: any) => {
+  const { t } = props;
+
   return (
     <div className="price-by-photo-component _flex _justify-center">
       <div className="white-bg">
         <div className="_flex _flex-col">
           <div className="title _flex _justify-center">
-            {'Get the price from the photo \n with 99% accuracy'}
+            {t('Get the price from the photo \n with 99% accuracy')}
           </div>
           <div className="text _flex _justify-center">
-            {'Send a photo of the room and comments in any convenient \n messenger, and we will make an accurate calculation for you'}
+            {t('Send a photo of the room and comments in any convenient \n messenger, and we will make an accurate calculation for you')}
           </div>
           <div className="img-wrapper _flex _justify-center">
             <Image src={bubblesSvg} alt='' />

@@ -29,11 +29,11 @@ export const Header: FC<Props> = ({ locales }) => {
   const [localesModal, setLocalesModal] = useState(false);
   const { locale, setNewLocal } = useContext(LocaleContext);
   const navigation = [
-    { title: t('Service') },
-    { title: t('FAQ') },
-    { title: t('Subscription') },
-    { href: '/career', title: t('Career') },
-    { title: t('Gift') },
+    { title: 'Service header' },
+    { title: 'FAQ header' },
+    { title: 'Subscription header' },
+    { href: '/career', title: 'Career header' },
+    { title: 'Gift header' },
   ];
 
   const onSelectLocale = (e: any, language: string) => {
@@ -60,7 +60,7 @@ export const Header: FC<Props> = ({ locales }) => {
         {navigation.map(navItem => (
           <div className="navigation-wrapper _flex _flex-col _justify-center" key={navItem.title}>
             <Link href={navItem.href || '/'} className="_px-4 _py-2">
-              <div className="nav-link">{navItem.title}</div>
+              <div className="nav-link">{t(navItem.title)}</div>
             </Link>
           </div>
         ))}
@@ -81,7 +81,7 @@ export const Header: FC<Props> = ({ locales }) => {
                   onClick={(e) => onSelectLocale(e, option)}
                   key={option}
                 >
-                  {option}
+                  {t(option)}
                 </div>
               ))}
             </div>

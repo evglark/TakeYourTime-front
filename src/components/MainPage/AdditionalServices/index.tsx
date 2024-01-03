@@ -29,7 +29,8 @@ import windowSvg from './icons/window.svg';
 
 import './style.scss';
 
-export const AdditionalServices = () => {
+export const AdditionalServices = (props: any) => {
+  const { t } = props;
   const services = [
     { title: 'Clean the oven', icons: ovenSvg },
     { title: 'Clean the fridge', icons: fridgeSvg },
@@ -72,7 +73,9 @@ export const AdditionalServices = () => {
 
   return (
     <div className="additional-services">
-      <div className="title _mb-8">Additional services</div>
+      <div className="title _mb-8">
+        {t('Additional services')}
+      </div>
       <Slider
         elements={getServicesGroup().map((el => ({
           id: el.id,
@@ -83,7 +86,7 @@ export const AdditionalServices = () => {
                   <Image src={el.coll[0].icons} alt='' />
                 </div>
                 <div className="item-title _whitespace-nowrap">
-                  {el.coll[0].title}
+                  {t(el.coll[0].title)}
                 </div>
               </div>
               <div className="service-wrapper _w-full _flex _flex-col _justify-center _gap-5">
@@ -91,7 +94,7 @@ export const AdditionalServices = () => {
                   <Image src={el.coll[1].icons} alt='' />
                 </div>
                 <div className="item-title _whitespace-nowrap">
-                  {el.coll[1].title}
+                  {t(el.coll[1].title)}
                 </div>
               </div>
             </div>

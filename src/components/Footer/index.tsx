@@ -7,7 +7,9 @@ import { LogoIcon } from '@/components/Header/icons/Logo';
 
 import './style.scss';
 
-export const Footer = () => {
+export const Footer = (props: any) => {
+  const { t } = props;
+
   return (
     <footer className="footer-wrapper">
       <div className="_flex _justify-center">
@@ -16,14 +18,14 @@ export const Footer = () => {
         </div>
       </div>
       <div className="title _flex _justify-center">
-        <div>Take Your Time</div>
+        <div>{t('Take Your Time')}</div>
       </div>
       <div className="_flex _justify-center">
         <div className="links-wrapper _flex _justify-between">
-          <div>Services</div>
-          <div>FAQ</div>
-          <div>Subscription</div>
-          <div>Gift Cards</div>
+          <div>{t('Services footer')}</div>
+          <div>{t('FAQ footer')}</div>
+          <div>{t('Subscription footer')}</div>
+          <div>{t('Gift Cards footer')}</div>
         </div>
       </div>
       <div className="_flex _justify-center">
@@ -41,7 +43,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="_flex _justify-center">
-        All rights reserved
+        {t('All rights reserved')}
       </div>
     </footer>
   )

@@ -31,14 +31,14 @@ export const MainPage: FC<Props> = (props) => {
         <MainOffer t={t} />
         <Advantages t={t} />
         <Costs t={t} />
-        <Cleaning />
-        <PriceByPhoto />
-        <AdditionalServices />
-        <Promotions />
-        <FAQ />
+        <Cleaning t={t} />
+        <PriceByPhoto t={t} />
+        <AdditionalServices t={t} />
+        <Promotions t={t} />
+        <FAQ t={t} />
         <div className="_flex _flex-col">
-          <Order />
-          <Footer />
+          <Order t={t} />
+          <Footer t={t} />
         </div>
       </div>
     </div>

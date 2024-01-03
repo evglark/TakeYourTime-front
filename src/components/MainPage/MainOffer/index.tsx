@@ -24,8 +24,6 @@ export const MainOffer = (props: any) => {
     backgroundRepeat: 'no-repeat',
   });
 
-  console.log('mainPng', mainPng);
-
   return (
     <div className="main-offer-wrapper" style={getImgStyle(mainPng.src)}>
       <div className="people-wrapper-man" style={getImgStyle(manPng.src)} />

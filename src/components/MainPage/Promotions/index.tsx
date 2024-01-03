@@ -10,7 +10,9 @@ import parentAndChildrenSvg from './images/parent-and-children.svg';
 import studentSvg from './images/student.svg';
 import './style.scss';
 
-export const Promotions = () => {
+export const Promotions = (props: any) => {
+  const { t } = props;
+
   const promotions = [
     { img: giftSvg, text: 'Make the first order Promo code TYT - 20% off your first order' },
     { img: studentSvg, text: 'Students, save big on your cleaning services with us! Use promo code STUDENTCLEAN for 10% off' },
@@ -33,7 +35,9 @@ export const Promotions = () => {
             <div className="_flex _justify-center">
               <Image src={el.img} alt='' />
             </div>
-            <div className="text">{el.text}</div>
+            <div className="text">
+              {t(el.text)}
+            </div>
           </div>
         ))}
       </div>
@@ -42,7 +46,7 @@ export const Promotions = () => {
           elements={[...discounts, ...discounts].map((el, i) => ({
             id: el.services.join('n' + i),
             content: (): JSX.Element => (
-              <DiscountItem discount={{ ...el, key: el.services.join('n' + i) }} />
+              <DiscountItem discount={{ ...el, key: el.services.join('n' + i) }} t={t} />
             )
           }))}
           status={false}

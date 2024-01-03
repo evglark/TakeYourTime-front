@@ -9,6 +9,7 @@ import rectangleSvg from './icons/rectangle.svg';
 import './style.scss';
 
 interface IProps {
+  t: any;
   discount: {
     save: string;
     color: string;
@@ -18,7 +19,7 @@ interface IProps {
 }
 
 export const DiscountItem: FC<IProps> = (props) => {
-  const { discount: { save, color, services, key } } = props;
+  const { t, discount: { save, color, services, key } } = props;
   const colors = { yellow: '#F9C630', green: '#7ED957' }
   const serviceIcons = {
     Cleaning: cleaningSvg,
@@ -44,7 +45,7 @@ export const DiscountItem: FC<IProps> = (props) => {
               <Image src={serviceIcons[services[0]]} alt='' />
             </div>
             <div className="_whitespace-nowrap">
-              {services[0]}
+              {t(services[0])}
             </div>
           </div>
           <div>
@@ -56,12 +57,12 @@ export const DiscountItem: FC<IProps> = (props) => {
               <Image src={serviceIcons[services[1]]} alt='' />
             </div>
             <div className="_whitespace-nowrap">
-              {services[1]}
+              {t(services[1])}
             </div>
           </div>
         </div>
         <div className="order-button-wrapper _flex _flex-col _justify-center">
-          <div>Order</div>
+          <div>{t('Order')}</div>
         </div>
       </div>
     </div>

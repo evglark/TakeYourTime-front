@@ -5,7 +5,8 @@ import { rooms, options } from './constants';
 import { getRoom } from './utils';
 import './style.scss';
 
-export const Cleaning = () => {
+export const Cleaning = (props: any) => {
+  const { t } = props;
   const [room, setRoom] = useState(() => rooms[0]);
   const [imgWidth, setImgWidth] = useState(0);
   const [imgHeight, setImgHeight] = useState(0);
@@ -43,7 +44,7 @@ export const Cleaning = () => {
             <Fragment key={el.title + JSON.stringify(el.position)}>
               {/* @ts-ignore */}
               <div className="room-services _flex _gap-3" style={{ ...position, ...flexDirection }}>
-                <div className="room-service-title _flex _items-center">{el.title}</div>
+                <div className="room-service-title _flex _items-center">{t(el.title)}</div>
                 <div className="room-service-point-wrapper _flex _justify-center _items-center">
                   <div className="room-service-point" />
                 </div>
@@ -59,7 +60,7 @@ export const Cleaning = () => {
             onClick={() => setRoom(el as string)}
             key={el}
           >
-            {el}
+            {t(el)}
           </div>
         ))}
       </div>
