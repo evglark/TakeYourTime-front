@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
+import { Writer } from '@/components/common/Writer';
 import { Switcher } from '@/components/common/Switcher';
 import { Discount } from './icons/Discount';
 import { tabs, sales } from './constants';
@@ -114,7 +115,9 @@ export const Costs = (props: any) => {
           {costs.map((el) => (
             <div className="costs-item _flex _flex-col" key={el.title}>
               <div className="title">{el.title}</div>
-              <div className="text _whitespace-pre-line">{el.text}</div>
+              <div className="text _whitespace-pre-line">
+                <Writer text={el.text} />
+              </div>
               <div className="_flex _justify-center">
                 <div className="coast">{el.coast}</div>
                 <div className="old-coast _flex _flex-col _justify-center">{el.oldCoast}</div>
