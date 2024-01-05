@@ -25,14 +25,16 @@
     background: #ECF0FF;
 
     .sales-list {
+      width: 26%;
       margin: 28px 20px 28px 28px;
 
       .sale-item {
         padding: 14px 27px;
-        width: 250px;
 
         .title {
           margin-top: 8px;
+          width: 100%;
+          text-align: center;
           color: #232323;
           font-size: 20px;
           font-weight: 600;
@@ -62,11 +64,14 @@
     }
 
     .costs-wrapper {
+      width: 100%;
+
       .costs-item {
         text-align: center;
-        margin: 28px 20px;
+        margin: 28px 0;
 
         .title {
+
           color: #232323;
           font-size: 20px;
           font-weight: 600;
@@ -75,6 +80,7 @@
   
         .text {
           margin: 16px 0 24px 0;
+          padding: 0 20px;
           color: #5C5C5C;
           font-size: 16px;
           font-weight: 400;

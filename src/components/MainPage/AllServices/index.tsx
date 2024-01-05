@@ -6,12 +6,14 @@ import { Slider } from '@/components/common/Slider';
 import Airbnb from './icons/airbnb.svg';
 import Brush from './icons/brush.svg';
 import BurningTime from './icons/burning-time.svg'
-import Confetti from './icons/confetti.svg'
+import Confetti from './icons/confetti.svg';
+import Clean from './icons/clean.svg';
 import DiscountEmail from './icons/discount-email.svg'
 import Ecology from './icons/ecology.svg'
 import Kitchen from './icons/kitchen.svg';
 import List from './icons/list.svg';
 import Mask from './icons/mask.svg';
+import Office from './icons/office.svg';
 import OzoneLayer from './icons/ozone-layer.svg';
 import Sofa from './icons/sofa.svg'
 import WeMoveToNewHouse from './icons/we-move-to-new-house.svg'
@@ -21,9 +23,9 @@ import './style.scss';
 export const AllServices = (props: any) => {
   const { t } = props;
   const services = [
-    { title: 'Regular' },
+    { title: 'Regular', icon: Clean },
     { title: 'Dry cleaning', icon: Sofa },
-    { title: 'Deep' },
+    { title: 'Deep', icon: Clean },
     { title: 'Window cleaning', icon: Window },
     { title: 'Eco cleaning', icon: Ecology },
     { title: 'Post-construction', icon: Brush },
@@ -33,7 +35,7 @@ export const AllServices = (props: any) => {
     { title: 'In a last minute', icon: BurningTime },
     { title: 'Custom cleaning', icon: List },
     { title: 'After party', icon: Confetti },
-    { title: 'Office' },
+    { title: 'Office', icon: Office },
     { title: 'While sickness', icon: Mask },
     { title: 'Deep kitchen', icon: Kitchen },
     { title: 'Airbnb', icon: Airbnb },
@@ -65,9 +67,7 @@ export const AllServices = (props: any) => {
                   {t(el.coll[0].title)}
                 </div>
                 <div className="_flex _justify-center">
-                  {el.coll[0].icon ? (
-                    <Image src={el.coll[0].icon} alt='' />
-                  ) : null}
+                  <Image src={el.coll[0].icon} alt='' />
                 </div>
                 <div className="_flex _justify-center">
                   <div className="_flex _gap-2">
@@ -85,9 +85,7 @@ export const AllServices = (props: any) => {
                   {t(el.coll[1].title)}
                 </div>
                 <div className="_flex _justify-center">
-                  {el.coll[1].icon ? (
-                    <Image src={el.coll[1].icon} alt='' />
-                  ) : null}
+                  <Image src={el.coll[1].icon} alt='' />
                 </div>
                 <div className="_flex _justify-center">
                   <div className="_flex _gap-2">

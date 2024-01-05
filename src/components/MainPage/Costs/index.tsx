@@ -75,8 +75,8 @@ export const Costs = (props: any) => {
       <div className="main-title">
         <b>{t('How much it costs')}</b>
       </div>
-      <Switcher tab={tab} tabs={tabs} onClick={(el: string) => setTab(el)} />
-      <div className="costs-sales-wrapper _flex _justify-center">
+      <Switcher tab={tab} tabs={tabs} t={t} onClick={(el: string) => setTab(el)} />
+      <div className="costs-sales-wrapper _flex _justify-between">
         {tab === 'Subscription' ? (
           <div className="sales-list _flex _flex-col _justify-center">
             {sales.map((el) => (
@@ -111,7 +111,7 @@ export const Costs = (props: any) => {
             </div>
           </div>
         )}
-        <div className="costs-wrapper _flex">
+        <div className="costs-wrapper _flex _justify-around">
           {costs.map((el) => (
             <div className="costs-item _flex _flex-col" key={el.title}>
               <div className="title">{el.title}</div>

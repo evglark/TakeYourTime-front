@@ -70,7 +70,7 @@ export const Header: FC<Props> = ({ locales }) => {
         >
           <Link href={'/'} className="_py-2 _pr-1 _pl-4">
             {/* @ts-ignore */}
-            <div className="nav-link">{mainLocales[locale]}</div>
+            <div className="nav-link">{t(mainLocales[locale])}</div>
           </Link>
           <Polygon />
           {localesModal ? (
