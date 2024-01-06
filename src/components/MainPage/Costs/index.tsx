@@ -131,9 +131,15 @@ export const Costs = (props: any) => {
                 {t('Get the discount')}
               </div>
               <div className="_text-center">
-                <span>{t('Promo code')} </span>
-                <span className="_font-semibold">{t('TYT - 20%')}</span>
-                <span> {t('off your first order')}</span>
+                <span>
+                  <Writer text={t('Promo code')} />
+                </span>
+                <span className="_font-semibold">
+                  <Writer text={t('TYT - 20%')} />
+                </span>
+                <span>
+                  <Writer text={t('off your first order')} />
+                </span>
               </div>
             </div>
           </div>
