@@ -111,7 +111,7 @@ export const Costs = (props: any) => {
                 className={`
                   sale-item
                   ${el.title === salesCost ? ' active ' : ' '}
-                  _flex _justify-between _cursor-pointer
+                  _flex _justify-between _items-center _cursor-pointer
                 `}
                 onClick={() => setSalesCost(el.title)}
                 key={el.title}
@@ -130,7 +130,7 @@ export const Costs = (props: any) => {
               <div className="title _flex _justify-center _font-semibold">
                 {t('Get the discount')}
               </div>
-              <div className="_text-center">
+              <div className="no-sales-text-wrapper _text-center">
                 <span>
                   <Writer text={t('Promo code')} />
                 </span>

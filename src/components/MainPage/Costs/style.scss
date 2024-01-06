@@ -13,8 +13,14 @@
     width: 26%;
     margin: 28px 22px 28px 31px;
 
-    .title {
-      margin: 4px 0;
+    .no-sales-text-wrapper {
+      div {
+        display: inline;
+      }
+
+      .title {
+        margin: 4px 0;
+      }
     }
   }
 
