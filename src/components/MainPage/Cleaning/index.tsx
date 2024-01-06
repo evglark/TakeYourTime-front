@@ -4,10 +4,14 @@ import Image from 'next/image';
 
 import { Switcher } from '@/components/common/Switcher';
 
-import bedroomEngDeep from './images/BedroomEngDeep.png';
+import BedroomEngDeep from './images/BedroomEngDeep.png';
 import BedroomEngReg from './images/BedroomEngReg.png';
-import bedroomRusDeep from './images/BedroomRusDeep.png';
+import BedroomPolDeep from './images/BedroomDeepPol.png';
+import BedroomPolReg from './images/BedroomRegPol.png';
+import BedroomRusDeep from './images/BedroomRusDeep.png';
 import BedroomRusReg from './images/BedroomRusReg.png';
+import BedroomUkrDeep from './images/BedroomDeepUkr.png';
+import BedroomUkrReg from './images/BedroomRegUkr.png';
 
 import './style.scss';
 
@@ -15,15 +19,15 @@ const roomsImages = {
   Bedroom: {
     Regular: {
       en: BedroomEngReg,
-      pl: BedroomRusReg, // TODO: change to BedroomRusReg
+      pl: BedroomPolReg,
       ru: BedroomRusReg,
-      ua: BedroomRusReg, // TODO: change to BedroomRusReg
+      ua: BedroomUkrReg,
     },
     Deep: {
-      en: bedroomEngDeep,
-      pl: bedroomEngDeep, // TODO: change to BedroomRusDeep
-      ru: bedroomRusDeep,
-      ua: bedroomEngDeep, // TODO: change to BedroomRusDeep
+      en: BedroomEngDeep,
+      pl: BedroomPolDeep,
+      ru: BedroomRusDeep,
+      ua: BedroomUkrDeep,
     }
   },
   Kitchen: {
