@@ -14,6 +14,33 @@ export const Costs = (props: any) => {
   const [salesCost, setSalesCost] = useState(() => sales[0].title);
   const router = useRouter();
 
+  const getText = (title: string) => {
+    if (tab === 'One-time') {
+      if (title === '1-bedroom') return 'One-time 1-bedroom cleaning';
+      if (title === '2-bedroom') return 'One-time 2-bedroom cleaning';
+      if (title === '3-bedroom') return 'One-time 3-bedroom cleaning';
+    } else {
+      if (salesCost === 'Once a week') {
+        if (title === '1-bedroom') return 'Weekly 1-bedroom cleaning';
+        if (title === '2-bedroom') return 'Weekly 2-bedroom cleaning';
+        if (title === '3-bedroom') return 'Weekly 3-bedroom cleaning';
+      }
+
+      if (salesCost === 'Twice a month') {
+        if (title === '1-bedroom') return 'Twice a month 1-bedroom cleaning';
+        if (title === '2-bedroom') return 'Twice a month 2-bedroom cleaning';
+        if (title === '3-bedroom') return 'Twice a month 3-bedroom cleaning';
+      }
+
+      if (salesCost === 'Once a month') {
+        if (title === '1-bedroom') return 'Once a month 1-bedroom cleaning';
+        if (title === '2-bedroom') return 'Once a month 2-bedroom cleaning';
+        if (title === '3-bedroom') return 'Once a month 3-bedroom cleaning';
+      }
+    }
+    return '';
+  };
+
   const getCoast = (title: string) => {
     if (tab === 'One-time') {
       if (title === '1-bedroom') return '160 zl';
@@ -52,19 +79,19 @@ export const Costs = (props: any) => {
   const costs = [
     {
       title: '1-bedroom',
-      text: t('The cost covers weekly cleaning for a single room, the kitchen, a hallway, and one bathroom'),
+      text: t(getText('1-bedroom')),
       coast: getCoast('1-bedroom'),
       oldCoast: getOldCoast('1-bedroom'),
     },
     {
       title: '2-bedroom',
-      text: t('The cost covers weekly cleaning for two rooms, the kitchen, a hallway, and one bathroom'),
+      text: t(getText('2-bedroom')),
       coast: getCoast('2-bedroom'),
       oldCoast: getOldCoast('2-bedroom'),
     },
     {
       title: '3-bedroom',
-      text: t('The cost covers weekly cleaning for three rooms, the kitchen, a hallway, and one bathroom'),
+      text: t(getText('3-bedroom')),
       coast: getCoast('3-bedroom'),
       oldCoast: getOldCoast('3-bedroom'),
     },
