@@ -18,6 +18,6 @@ export const Switcher: FC<Props> = ({ tabs, tab, onClick, t = (str: string) => s
         </div>
       </div>
     ))}
-    <div className="active-block" style={{ left: tabs.indexOf(tab) * 133 + 'px' }}/>
+    <div className="active-block" style={{ left: tabs.indexOf(tab) === 0 ? '-1px' : tabs.indexOf(tab) * 133 + 'px' }}/>
   </div>
 );

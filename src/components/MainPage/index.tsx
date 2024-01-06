@@ -23,7 +23,7 @@ interface Props {
 
 export const MainPage: FC<Props> = (props) => {
   const { locales } = props;
-  const { t } = useLocales(locales);
+  const { t, lng } = useLocales(locales);
 
   return (
     <div className="main-page">
@@ -31,7 +31,7 @@ export const MainPage: FC<Props> = (props) => {
         <MainOffer t={t} />
         <Advantages t={t} />
         <AllServices t={t} />
-        <Cleaning t={t} />
+        <Cleaning t={t} lng={lng} />
         <Costs t={t} />
         <AdditionalServices t={t} />
         <PriceByPhoto t={t} />

@@ -25,6 +25,6 @@ export const initI18n = (locales: ILocales[]) => {
 
   return (lng: string) => {
     i18next.init({ lng, resources });
-    return i18next;
+    return { t: i18next.t, lng };
   };
 }

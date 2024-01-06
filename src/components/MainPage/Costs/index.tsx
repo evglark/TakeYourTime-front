@@ -116,8 +116,8 @@ export const Costs = (props: any) => {
                 onClick={() => setSalesCost(el.title)}
                 key={el.title}
               >
-                <div className="title">{t(el.title)}</div>
-                <div className="sale">{el.sale}</div>
+                <div className="title _flex _items-center">{t(el.title)}</div>
+                <div className="sale _flex _items-center">{el.sale}</div>
               </div>
             ))}
           </div>

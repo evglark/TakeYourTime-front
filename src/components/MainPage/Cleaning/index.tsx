@@ -1,35 +1,95 @@
 "use client";
-import React, { Fragment, useState, useRef, useLayoutEffect } from 'react';
+import React, { useState, useRef } from 'react';
+import Image from 'next/image';
+
 import { Switcher } from '@/components/common/Switcher';
 
-import { tabs, rooms, options } from './constants';
-import { getRoom } from './utils';
+import bedroomEngDeep from './images/BedroomEngDeep.png';
+import BedroomEngReg from './images/BedroomEngReg.png';
+import bedroomRusDeep from './images/bedroomRusDeep.png';
+import BedroomRusReg from './images/BedroomRusReg.png';
+
 import './style.scss';
 
+const roomsImages = {
+  Bedroom: {
+    Regular: {
+      en: BedroomEngReg,
+      pl: BedroomRusReg, // TODO: change to BedroomRusReg
+      ru: BedroomRusReg,
+      ua: BedroomRusReg, // TODO: change to BedroomRusReg
+    },
+    Deep: {
+      en: bedroomEngDeep,
+      pl: bedroomEngDeep, // TODO: change to BedroomRusDeep
+      ru: bedroomRusDeep,
+      ua: bedroomEngDeep, // TODO: change to BedroomRusDeep
+    }
+  },
+  Kitchen: {
+    Regular: {
+      en: BedroomEngReg, // TODO: change to BedroomRusReg
+      pl: BedroomRusReg, // TODO: change to BedroomRusReg
+      ru: BedroomRusReg, // TODO: change to BedroomRusReg
+      ua: BedroomRusReg, // TODO: change to BedroomRusReg
+    },
+    Deep: {
+      en: bedroomEngDeep, // TODO: change to BedroomRusReg
+      pl: bedroomEngDeep, // TODO: change to BedroomRusDeep
+      ru: bedroomRusDeep, // TODO: change to BedroomRusReg
+      ua: bedroomEngDeep, // TODO: change to BedroomRusDeep
+    }
+  },
+  Corridor: {
+    Regular: {
+      en: BedroomEngReg, // TODO: change to BedroomRusReg
+      pl: BedroomRusReg, // TODO: change to BedroomRusReg
+      ru: BedroomRusReg, // TODO: change to BedroomRusReg
+      ua: BedroomRusReg, // TODO: change to BedroomRusReg
+    },
+    Deep: {
+      en: bedroomEngDeep, // TODO: change to BedroomRusReg
+      pl: bedroomEngDeep, // TODO: change to BedroomRusDeep
+      ru: bedroomRusDeep, // TODO: change to BedroomRusReg
+      ua: bedroomEngDeep, // TODO: change to BedroomRusDeep
+    }
+  },
+  Bathroom: {
+    Regular: {
+      en: BedroomEngReg, // TODO: change to BedroomRusReg
+      pl: BedroomRusReg, // TODO: change to BedroomRusReg
+      ru: BedroomRusReg, // TODO: change to BedroomRusReg
+      ua: BedroomRusReg, // TODO: change to BedroomRusReg
+    },
+    Deep: {
+      en: bedroomEngDeep, // TODO: change to BedroomRusReg
+      pl: bedroomEngDeep, // TODO: change to BedroomRusDeep
+      ru: bedroomRusDeep, // TODO: change to BedroomRusReg
+      ua: bedroomEngDeep, // TODO: change to BedroomRusDeep
+    }
+  },
+  Balcony: {
+    Regular: {
+      en: BedroomEngReg, // TODO: change to BedroomRusReg
+      pl: BedroomRusReg, // TODO: change to BedroomRusReg
+      ru: BedroomRusReg, // TODO: change to BedroomRusReg
+      ua: BedroomRusReg, // TODO: change to BedroomRusReg
+    }
+  },
+};
+
 export const Cleaning = (props: any) => {
-  const { t } = props;
+  const { t, lng } = props;
+  const tabs = ['Regular', 'Deep'];
+  const rooms = {
+    Regular: ['Bedroom', 'Kitchen', 'Corridor', 'Bathroom'],
+    Deep: ['Bedroom', 'Kitchen', 'Corridor', 'Bathroom', 'Balcony']
+  };
+
   const [tab, setTab] = useState(() => tabs[0]);
   // @ts-ignore
   const [room, setRoom] = useState(() => rooms[tab][0]);
-  const [imgWidth, setImgWidth] = useState(0);
-  const [imgHeight, setImgHeight] = useState(0);
   const myElementRef = useRef<HTMLDivElement>(null);
-
-  const countMarginTop = (top: number, newHeight: number): number => {
-    return Math.round(top * (newHeight / 850));
-  }
-
-  const countMarginLeft = (left: number, newWidth: number): number => {
-    return Math.round(left * (newWidth / 1232));
-  }
-
-  useLayoutEffect(() => {
-    if (myElementRef.current) {
-      const el = myElementRef.current.getBoundingClientRect();
-      setImgWidth(el.width);
-      setImgHeight(el.height);
-    }
-  }, []);
 
   return (
     <div className="costs-component _flex _flex-col _items-center">
@@ -38,27 +98,8 @@ export const Cleaning = (props: any) => {
         <Switcher tab={tab} tabs={tabs} t={t} onClick={(el: string) => setTab(el)} />
       </div>
       <div className={"room-img-wrapper" + " " + room.toLowerCase()} ref={myElementRef}>
-        {getRoom(room)}
         {/* @ts-ignore */}
-        {options[tab].find((el: any) => el.room === room)?.options.map((el) => {
-          const flexDirection = { flexDirection: el.revers ? 'row-reverse' : 'row' };
-          const position = {
-            top: countMarginTop(el.position[1], imgHeight),
-            left: countMarginLeft(el.position[0], imgWidth),
-          };
-
-          return (
-            <Fragment key={el.title + JSON.stringify(el.position)}>
-              {/* @ts-ignore */}
-              <div className="room-services _flex _gap-3" style={{ ...position, ...flexDirection }}>
-                <div className="room-service-title _flex _items-center">{t(el.title)}</div>
-                <div className="room-service-point-wrapper _flex _justify-center _items-center">
-                  <div className="room-service-point" />
-                </div>
-              </div>
-            </Fragment>
-          );
-        })}
+        <Image src={roomsImages[room][tab][lng]} alt="" />
       </div>
       <div className="_flex _justify-around">
         {/* @ts-ignore */}
