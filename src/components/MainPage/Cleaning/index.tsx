@@ -32,44 +32,44 @@ const roomsImages = {
   },
   Kitchen: {
     Regular: {
-      en: BedroomEngReg, // TODO: change to BedroomRusReg
-      pl: BedroomRusReg, // TODO: change to BedroomRusReg
-      ru: BedroomRusReg, // TODO: change to BedroomRusReg
-      ua: BedroomRusReg, // TODO: change to BedroomRusReg
+      en: BedroomEngReg,
+      pl: BedroomPolReg,
+      ru: BedroomRusReg,
+      ua: BedroomUkrReg,
     },
     Deep: {
-      en: bedroomEngDeep, // TODO: change to BedroomRusReg
-      pl: bedroomEngDeep, // TODO: change to BedroomRusDeep
-      ru: bedroomRusDeep, // TODO: change to BedroomRusReg
-      ua: bedroomEngDeep, // TODO: change to BedroomRusDeep
+      en: BedroomEngDeep,
+      pl: BedroomPolDeep,
+      ru: BedroomRusDeep,
+      ua: BedroomUkrDeep,
     }
   },
   Corridor: {
     Regular: {
-      en: BedroomEngReg, // TODO: change to BedroomRusReg
-      pl: BedroomRusReg, // TODO: change to BedroomRusReg
-      ru: BedroomRusReg, // TODO: change to BedroomRusReg
-      ua: BedroomRusReg, // TODO: change to BedroomRusReg
+      en: BedroomEngReg,
+      pl: BedroomPolReg,
+      ru: BedroomRusReg,
+      ua: BedroomUkrReg,
     },
     Deep: {
-      en: bedroomEngDeep, // TODO: change to BedroomRusReg
-      pl: bedroomEngDeep, // TODO: change to BedroomRusDeep
-      ru: bedroomRusDeep, // TODO: change to BedroomRusReg
-      ua: bedroomEngDeep, // TODO: change to BedroomRusDeep
+      en: BedroomEngDeep,
+      pl: BedroomPolDeep,
+      ru: BedroomRusDeep,
+      ua: BedroomUkrDeep,
     }
   },
   Bathroom: {
     Regular: {
-      en: BedroomEngReg, // TODO: change to BedroomRusReg
-      pl: BedroomRusReg, // TODO: change to BedroomRusReg
-      ru: BedroomRusReg, // TODO: change to BedroomRusReg
-      ua: BedroomRusReg, // TODO: change to BedroomRusReg
+      en: BedroomEngReg,
+      pl: BedroomPolReg,
+      ru: BedroomRusReg,
+      ua: BedroomUkrReg,
     },
     Deep: {
-      en: bedroomEngDeep, // TODO: change to BedroomRusReg
-      pl: bedroomEngDeep, // TODO: change to BedroomRusDeep
-      ru: bedroomRusDeep, // TODO: change to BedroomRusReg
-      ua: bedroomEngDeep, // TODO: change to BedroomRusDeep
+      en: BedroomEngDeep,
+      pl: BedroomPolDeep,
+      ru: BedroomRusDeep,
+      ua: BedroomUkrDeep,
     }
   },
   Balcony: {
@@ -96,7 +96,7 @@ export const Cleaning = (props: any) => {
   const myElementRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="costs-component _flex _flex-col _items-center">
+    <div className="cleaning-component _flex _flex-col _items-center">
       <div className="main-title">{t('What cleaning consists of')}</div>
       <div className="switcher-wrapper">
         <Switcher tab={tab} tabs={tabs} t={t} onClick={(el: string) => setTab(el)} />

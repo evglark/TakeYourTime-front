@@ -113,11 +113,15 @@
           margin: 24px 14px 0 14px;
           padding: 18px 0;
           border-radius: 40px;
-          background: var(--Primary, #2B8AFC);
-          color: var(--backround-primary, #F9F9F9);
+          background: #2B8AFC;
+          color: #F9F9F9;
           font-size: 16px;
           font-weight: 500;
           line-height: 20px;
+        }
+
+        .button:hover {
+          background: #0073FC;
         }
       }
     }

@@ -4,26 +4,20 @@ import Image from 'next/image';
 
 import { Slider } from '@/components/common/Slider';
 
-import babyStrollerSvg from './icons/baby-stroller.svg';
-import balconySvg from './icons/balcony.svg';
-import bathroomSvg from './icons/bathroom.svg';
-import carpetSvg from './icons/carpet.svg';
+import coffeeMachineSvg from './icons/coffee-machine.svg';
+import cleanClothesSvg from './icons/clean-clothes.svg';
 import cleanDishesSvg from './icons/clean-dishes.svg';
 import closetSvg from './icons/closet.svg';
 import cookerHoodSvg from './icons/cooker-hood.svg';
 import fridgeSvg from './icons/fridge.svg';
-import hangerSvg from './icons/hanger.svg';
 import hoursglassSvg from './icons/hoursglass.svg';
 import ironSvg from './icons/iron.svg';
 import kitchenSvg from './icons/kitchen.svg';
 import laundrySvg from './icons/laundry.svg';
 import microwaveSvg from './icons/microwave.svg';
 import ovenSvg from './icons/oven.svg';
-import ozoneLayerSvg from './icons/ozone-layer.svg';
 import petToiletTraySvg from './icons/pet-toilet-tray.svg';
-import readingRoomSvg from './icons/reading-room.svg';
-import rectangleSvg from './icons/rectangle.svg';
-import showerSvg from './icons/shower.svg';
+import SlowCooker from './icons/slow-cooker.svg';
 import wateringPlantsSvg from './icons/watering-plants.svg';
 import windowSvg from './icons/window.svg';
 
@@ -39,23 +33,15 @@ export const AdditionalServices = (props: any) => {
     { title: 'Clean kitchen cabinets', icons: kitchenSvg },
     { title: 'Wash the window', icons: windowSvg },
     { title: 'Wash the dishes', icons: cleanDishesSvg },
-    { title: 'Ozonation', icons: ozoneLayerSvg },
+    { title: 'Space organizer', icons: cleanClothesSvg },
     { title: 'Ironing', icons: ironSvg },
-    { title: 'Carpet cleaning', icons: carpetSvg },
+    { title: 'Clean coffee-machine', icons: coffeeMachineSvg },
     { title: 'Clean animal’s tray', icons: petToiletTraySvg },
     { title: 'Laundry', icons: laundrySvg },
     { title: 'Extra Tasks', icons: hoursglassSvg },
     { title: 'Water plants', icons: wateringPlantsSvg },
     { title: 'Wardrobe cleaning', icons: closetSvg },
-    { title: 'Baby stroller cleaning', icons: babyStrollerSvg },
-    { title: 'Cleaning bath or shower stall', icons: showerSvg },
-    { title: 'Cleaning room', icons: readingRoomSvg },
-    { title: 'Clean the balcony', icons: balconySvg },
-    { title: 'Clean the bathroom', icons: bathroomSvg },
-    { title: 'Dry cleaning', icons: rectangleSvg },
-    { title: 'Cleaning the corridor', icons: kitchenSvg },
-    { title: 'Deep kitchen cleaning', icons: kitchenSvg },
-    { title: 'Cleaning the cloak room', icons: hangerSvg },
+    { title: 'Clean slow-cooker', icons: SlowCooker },
   ];
 
   const getServicesGroup = () => {
