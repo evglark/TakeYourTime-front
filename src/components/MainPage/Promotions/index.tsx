@@ -9,6 +9,7 @@ import giftSvg from './images/gift.svg';
 import parentAndChildrenSvg from './images/parent-and-children.svg';
 import studentSvg from './images/student.svg';
 import './style.scss';
+import { Writer } from '@/components/common/Writer';
 
 export const Promotions = (props: any) => {
   const { t } = props;
@@ -36,12 +37,12 @@ export const Promotions = (props: any) => {
               <Image src={el.img} alt='' />
             </div>
             <div className="text">
-              <b>{t(el.text)}</b>
-              {el.text2 && t(el.text2)}
-              <b>{el.text3 && t(el.text3)}</b>
-              {el.text4 && t(el.text4)}
-              <b>{el.text5 && t(el.text5)}</b>
-              {el.text6 && t(el.text6)}
+              <b><Writer text={t(el.text)} /></b>
+              {el.text2 && <Writer text={t(el.text2)} />}
+              <b>{el.text3 && <Writer text={t(el.text3)} />}</b>
+              {el.text4 && <Writer text={t(el.text4)} />}
+              <b>{el.text5 && <Writer text={t(el.text5)} />}</b>
+              {el.text6 && <Writer text={t(el.text6)} />}
             </div>
           </div>
         ))}
