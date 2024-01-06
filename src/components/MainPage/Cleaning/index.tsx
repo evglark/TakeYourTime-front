@@ -6,7 +6,7 @@ import { Switcher } from '@/components/common/Switcher';
 
 import bedroomEngDeep from './images/BedroomEngDeep.png';
 import BedroomEngReg from './images/BedroomEngReg.png';
-import bedroomRusDeep from './images/bedroomRusDeep.png';
+import bedroomRusDeep from './images/BedroomRusDeep.png';
 import BedroomRusReg from './images/BedroomRusReg.png';
 
 import './style.scss';
