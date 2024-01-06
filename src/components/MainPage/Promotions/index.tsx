@@ -14,9 +14,9 @@ export const Promotions = (props: any) => {
   const { t } = props;
 
   const promotions = [
-    { img: giftSvg, text: 'Make the first order Promo code TYT - 20% off your first order' },
-    { img: studentSvg, text: 'Students, save big on your cleaning services with us! Use promo code STUDENTCLEAN for 10% off' },
-    { img: parentAndChildrenSvg, text: 'Large family? Enjoy more family time, less cleaning time. Get 10% off with promo code FAMILYCLEAN' },
+    { img: giftSvg, text: 'Make the first', text2: 'order Promo code', text3: 'TYT - 20%', text4: 'off your first order' },
+    { img: studentSvg, text: 'Students', text2: ', save big on your cleaning services with us! Use promo code', text3: 'STUDENTCLEAN', text4: 'for', text5: '10%', text6: 'off'},
+    { img: parentAndChildrenSvg, text: 'Large family?', text2: 'Enjoy more family time, less cleaning time. Get', text3: '10%', text4: 'off with promo code', text5: 'FAMILYCLEAN' },
   ];
 
   const discounts = [
@@ -36,7 +36,12 @@ export const Promotions = (props: any) => {
               <Image src={el.img} alt='' />
             </div>
             <div className="text">
-              {t(el.text)}
+              <b>{t(el.text)}</b>
+              {el.text2 && t(el.text2)}
+              <b>{el.text3 && t(el.text3)}</b>
+              {el.text4 && t(el.text4)}
+              <b>{el.text5 && t(el.text5)}</b>
+              {el.text6 && t(el.text6)}
             </div>
           </div>
         ))}
