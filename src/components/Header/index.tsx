@@ -1,5 +1,6 @@
 'use client';
 import React, { FC, useContext, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 import { useLocales } from '@/hooks/useLocales';
@@ -28,6 +29,8 @@ export const Header: FC<Props> = ({ locales }) => {
   const { t } = useLocales(locales);
   const [localesModal, setLocalesModal] = useState(false);
   const { locale, setNewLocal } = useContext(LocaleContext);
+  const pathname = usePathname();
+
   const navigation = [
     { title: 'Service header' },
     { title: 'FAQ header' },
@@ -58,7 +61,7 @@ export const Header: FC<Props> = ({ locales }) => {
           </Link>
         </div>
         {navigation.map(navItem => (
-          <div className="navigation-wrapper _flex _flex-col _justify-center" key={navItem.title}>
+          <div className={`navigation-wrapper ${pathname === navItem.href ? 'navigation-wrapper-active' : ''} _flex _flex-col _justify-center`} key={navItem.title}>
             <Link href={navItem.href || '/'} className="_px-4 _py-2">
               <div className="nav-link">{t(navItem.title)}</div>
             </Link>

@@ -1,11 +1,13 @@
 .main-offer-wrapper {
   position: relative;
   height: calc(100vh - 85px);
+  overflow: hidden;
 
   .vector-wrapper {
     position: absolute;
-    top: 117px;
-    left: 44px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     .offer-wrapper {
       position: absolute;
@@ -53,6 +55,10 @@
         color: #F9F9F9;
       }
 
+      .main-button:hover {
+        background-color: #0073FC;
+      }
+
       .sub-button {
         min-width: 100px;
         padding: 24px 0;
@@ -61,32 +67,10 @@
         background: #F9F9F9;
         color: #13277E;
       }
-    }
-  }
 
-  .people-wrapper-man {
-    position: absolute;
-    height: 82%;
-    width: 440px;
-    top: 16%;
-    left: 35%;
-    z-index: 3;
-  }
-
-  .people-wrapper-woman {
-    position: absolute;
-    height: 68%;
-    width: 440px;
-    top: 23%;
-    left: 58%;
-    z-index: 2;
-  }
-}
-
-@media screen and (max-width: 1025px) {
-  .main-offer-wrapper {
-    .people-wrapper-man, .people-wrapper-woman {
-      display: none;
+      .sub-button:hover {
+        background: #0073FC;
+      }
     }
   }
 }

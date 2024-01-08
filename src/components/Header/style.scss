@@ -20,6 +20,16 @@ header {
     line-height: 24px;
   }
 
+  .navigation-wrapper:hover,
+  .navigation-wrapper-active {
+    color: #F9F9F9;
+    background: #13277E;
+  }
+
+  .navigation-wrapper:hover {
+    cursor: pointer;
+  }
+
   .navigation-sub-menu-wrapper {
     position: absolute;
     top: 10px;

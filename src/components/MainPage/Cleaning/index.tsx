@@ -141,8 +141,12 @@ export const Cleaning = (props: any) => {
         <Switcher tab={tab} tabs={tabs} t={t} onClick={(el: string) => setTab(el)} />
       </div>
       <div className={"room-img-wrapper" + " " + room.toLowerCase()} ref={myElementRef}>
-        {/* @ts-ignore */}
-        <Image src={roomsImages[room]?.[tab]?.[lng]} alt="" />
+        {tab === 'Regular' && room === 'Balcony' ? null : (
+          <>
+            {/* @ts-ignore */}
+            <Image src={roomsImages[room]?.[tab]?.[lng]} alt="" priority />
+          </>
+        )}
       </div>
       <div className="_flex _justify-around">
         {/* @ts-ignore */}

@@ -2,6 +2,7 @@
 import React, { FC } from 'react';
 
 import { Footer } from '@/components/Footer';
+import { useLocales } from '@/hooks/useLocales';
 
 import { Benefits } from './Benefits';
 import { InputForm } from './InputForm';
@@ -13,6 +14,9 @@ interface Props {
 }
 
 export const CareerPage: FC<Props> = (props) => {
+  const { locales } = props;
+  const { t } = useLocales(locales);
+
   return (
     <div className="main-page">
       <div className="main-content _flex _flex-col">
@@ -23,7 +27,7 @@ export const CareerPage: FC<Props> = (props) => {
         <div className="career-title">Filling form</div>
         <InputForm />
         <div className="_flex _flex-col">
-          <Footer />
+          <Footer t={t} />
         </div>
       </div>
     </div>
