@@ -32,4 +32,35 @@
   .discounts-wrapper {
     margin: 24px 94px;
   }
+
+  .overlay-wrapper-component {
+    padding: 40px;
+    width: 65%;
+    background-color: #F9F9F9;
+    border-radius: 20px;
+    position: relative;
+
+    .icon-wrapper {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+    }
+
+    .overlay-wrapper-component-title {
+      color: #13277E;
+      margin-bottom: 24px;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+
+    .overlay-wrapper-component-text {
+      color: #232323;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
 }

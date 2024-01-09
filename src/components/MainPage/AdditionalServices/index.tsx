@@ -57,6 +57,17 @@ export const AdditionalServices = (props: any) => {
     return group;
   };
 
+  const getItem = ({ title, icons }: any) => (
+    <div className="service-wrapper _w-full _flex _flex-col _justify-center _gap-5">
+      <div className="_flex _justify-center">
+        <Image src={icons} alt='' />
+      </div>
+      <div className="item-title _whitespace-nowrap">
+        {t(title)}
+      </div>
+    </div>
+  )
+
   return (
     <div className="additional-services">
       <div className="title _mb-8">
@@ -67,22 +78,8 @@ export const AdditionalServices = (props: any) => {
           id: el.id,
           content: (): JSX.Element => (
             <div className="_px-2.5 _flex _flex-col _w-full _gap-6">
-              <div className="service-wrapper _w-full _flex _flex-col _justify-center _gap-5">
-                <div className="_flex _justify-center">
-                  <Image src={el.coll[0].icons} alt='' />
-                </div>
-                <div className="item-title _whitespace-nowrap">
-                  {t(el.coll[0].title)}
-                </div>
-              </div>
-              <div className="service-wrapper _w-full _flex _flex-col _justify-center _gap-5">
-                <div className="_flex _justify-center">
-                  <Image src={el.coll[1].icons} alt='' />
-                </div>
-                <div className="item-title _whitespace-nowrap">
-                  {t(el.coll[1].title)}
-                </div>
-              </div>
+              {getItem(el.coll[0])}
+              {getItem(el.coll[1])}
             </div>
           )
         })))}
