@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { MessengerIcon } from '@/components/common/icons/Messenger';
-import { WhatsappIcon } from '@/components/common/icons//Whatsapp';
-import { TelegramIcon } from '@/components/common/icons/Telegram';
+import { MessengerIcon } from '@/components/common/icons/components/Messenger';
+import { WhatsappIcon } from '@/components/common/icons/components/Whatsapp';
+import { TelegramIcon } from '@/components/common/icons/components/Telegram';
 
 import { FooterLogo } from './icons/FooterLogo';
 import './style.scss';

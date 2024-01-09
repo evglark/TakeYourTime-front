@@ -1,12 +1,13 @@
 'use client';
-import React, { FC, useContext, useState } from 'react';
+import React, { FC, useContext, useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Cookies from 'js-cookie';
 
 import { useLocales } from '@/hooks/useLocales';
-import { MessengerIcon } from '@/components/common/icons/Messenger';
-import { TelegramIcon } from '@/components/common/icons/Telegram';
-import { WhatsappIcon } from '@/components/common/icons//Whatsapp';
+import { MessengerIcon } from '@/components/common/icons/components/Messenger';
+import { TelegramIcon } from '@/components/common/icons/components/Telegram';
+import { WhatsappIcon } from '@/components/common/icons/components/Whatsapp';
 import { LocaleContext } from '@/components/Providers';
 import { ILocales } from '@/locales';
 
@@ -46,9 +47,15 @@ export const Header: FC<Props> = ({ locales }) => {
       return mainLocales[key] === language;
     }) || 'en';
 
+    Cookies.set('locale', newLocale);
     setNewLocal(newLocale);
     setLocalesModal(false);
   }
+
+  useEffect(() => {
+    const locale = Cookies.get('locale') || 'en';
+    setNewLocal(locale);
+  }, []);
 
   return (
     <header>

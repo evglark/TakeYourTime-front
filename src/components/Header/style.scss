@@ -18,12 +18,22 @@ header {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+
+    a {
+      border: 1px solid #F9F9F9;
+    }
   }
 
-  .navigation-wrapper:hover,
-  .navigation-wrapper-active {
-    color: #F9F9F9;
-    background: #13277E;
+  .navigation-wrapper:hover a {
+    color: #2B8AFC;
+    border-radius: 100px;
+    border: 1px solid #C1DBFF;
+  }
+
+  .navigation-wrapper-active a {
+    color: #2B8AFC;
+    border-radius: 100px;
+    background: #F9F9F9;
   }
 
   .navigation-wrapper:hover {

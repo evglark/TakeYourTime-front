@@ -1,9 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 
-import { MessengerIcon } from '@/components/common/icons/Messenger';
-import { TelegramIcon } from '@/components/common/icons//Telegram';
-import { WhatsappIcon } from '@/components/common/icons/Whatsapp';
+import { MessengerIcon } from '@/components/common/icons/components/Messenger';
+import { TelegramIcon } from '@/components/common/icons/components/Telegram';
+import { WhatsappIcon } from '@/components/common/icons/components/Whatsapp';
+import { Writer } from '@/components/common/Writer';
 
 import bubblesSvg from './icons/bubbles.svg';
 import iPhoneSvg from './icons/iPhone.svg';
@@ -18,10 +19,10 @@ export const PriceByPhoto = (props: any) => {
       <div className="white-bg">
         <div className="_flex _flex-col">
           <div className="title _flex _justify-center">
-            {t('Get the price from the photo with 99% accuracy')}
+            <Writer text={t('Get the price from the photo with 99% accuracy')} />
           </div>
           <div className="text _flex _justify-center">
-            {t('Send a photo of the room and comments in any convenient \n messenger, and we will make an accurate calculation for you')}
+            <Writer text={t('Send a photo of the room and comments in any convenient \n messenger, and we will make an accurate calculation for you')} />
           </div>
           <div className="img-wrapper _flex _justify-center">
             <Image src={bubblesSvg} alt='' />
